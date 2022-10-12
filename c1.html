@@ -54,7 +54,7 @@
 							<p>
 							Many consumer products, technology and services companies are looking at digital channels as an opportunity to transform themselves from operation/ technology into consumer company. Transforming to a consumer first organization requires fingerprinting consumers, understanding consumer behavior. More importantly, understand and improve the effectiveness of digital transformation through consumer engagement at segment level.
 							</p>
-							<h2>Recency, Frequency & Monetary (RFM) </h2>
+							<h3>Recency, Frequency & Monetary (RFM) </h3>
 							<span class="image main"><img src="images/c1/1.RFM.svg" alt="" /></span>
 							<p>A Recency, Frequency and Monetary (RFM) score framework provides a baseline method to aggregate consumer behavior and identify segments of consumers. The basic hypothesis is that consumers with high recency, frequency and monetary value are most valuable to a company. In the above example from a standard data set, the last three columns with high RFM value (>13) and Most Valuable consumer = True belong mostly to the High value segment (label). Programmatically the RFM, labels are defined as follows:</p>
 							<pre>
@@ -73,7 +73,7 @@ df['RFM_labels']= df.RFM_labels.agg('|'.join)
 							
 							As variability in business environment and the complexity of consumer engagementgement increases, it then becomes imperative to consider a more robust technique. Using unsupervised learning to cluster consumers using their omni channel behavior can be interesting approach. While not awefully sophisticated K-Means clustering works reasomably well from few thousands to a few hundred thousand consumer record
 							</p>
-							<h2> K- Means Clustering </h2>
+							<h3> K- Means Clustering </h3>
 							<span class="image main"><img src="images/c1/2.cluster.svg" alt="" /></span>
 							<p> The above diagram is the result of clustering of the said RFM data. In diagram (a) the Elbow plot there is significant change in slope at K=3 and we choose to build the cluster for K=3. Diagram (b) is the two diensional representation of the multi dimensional space in the form of principal components (PCA). This shows 3 well formed clusters ina  wedged shaped profile. Investigating this furter, (c) is a quiver plot of the RFM feature vectors as projection on to the 2D PCA space. The Recency and the Monetary features are orthogonal to each other, meaning little or no correlation/ projection on each other. However, the Frequency and Monetary value features are very closely aligned. This is usually observed in scenario where product/ service catgeories or pricing variability within category is less.
 							</p>
@@ -84,7 +84,8 @@ df['RFM_labels']= df.RFM_labels.agg('|'.join)
 							<span class="image main"><img src="images/c1/3.Monetary.svg" alt="" /></span>
 							<h2> Heuristics versus Machine Learning </h2>
 							<span class="image main"><img src="images/c1/4.KMC_RFM.svg" alt="" /></span>
-							<p> </p>
+							<p> Merging the RFM segment and the K-Means clusters provides interesting insights. Cluser=2 nominally coincides with MVC consumers. So far we have worked to segment consumers by what have they done? How have a purchased? These answers the how? and what? questions. Not so much the who? question. The who question can be answered through profiling the consumer data</p>
+							<h2>Profiling </h2>
 						</div>
 					</div>
 
