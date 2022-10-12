@@ -88,8 +88,31 @@ df['RFM_labels']= df.RFM_labels.agg('|'.join)
 							<h2>Profiling </h2>
 							<p>To demonstrate how profiling works we shall interprete and try to answer the "who?" question for cluster=2. For a company transforming itself it is hard to get an abundance of consumer profile information. There are legala nd privacy issues as well. Some industries may mandate the capture of certain consumer profile data but in most cases there are stipulations around how not to use them. More importantly, the MAANG companies over time have acquirdd vast quantities of consumer profile, psychographics, demographics information through permission. There are also data providers who see to provide high quality primary data about consumers. In our example we choose 5 basic variables whose distributions with respec to MVC are shown below</p>
 							<span class="image main"><img src="images/c1/5.bar.svg" alt="" /></span>
-							<p> It does appear that </p>
+							<p> It does appear that MVCs are distributed in certain pockets of the consumer base. A standard way to profile consmers of a certain segment is to classify them against other segments- MVCs versus non-MVC for example. In this case a simple Decision Tree with <code> max_depth=4 </code> has been developed for illustrative purposes</p>
+							<span class="image main"><img src="images/c1/6.tree.svg" alt="" /></span>
+							<p> While this model can be significantly improved and generalized through ensembling and hyper-parameter tuning, the current decision tree has some interesting insights. The quality metrics used here is entropy fucntion and the split is using information gain. Entropy function is between 0 an 1. 1 signified complete disorder and 0 means complete order. The right hand most bottom leaf has a entropy of ~.7 translating to about 80% of the node to be MVCs. This just shows that personas fulfilling certain criteria may be valuable in the future. Generalized business rules can be generated from the tree.
 							</p>
+							<pre
+							|--- YoungFamily_True <= 0.50
+|   |--- Income_>100K <= 0.50
+|   |   |--- Income_>70K-100K <= 0.50
+|   |   |   |--- class: 0
+|   |   |--- Income_>70K-100K >  0.50
+|   |   |   |--- class: 0
+|   |--- Income_>100K >  0.50
+|   |   |--- class: 0
+|--- YoungFamily_True >  0.50
+|   |--- OnlineShopping3M_True <= 0.50
+|   |   |--- Income_>100K <= 0.50
+|   |   |   |--- class: 0
+|   |   |--- Income_>100K >  0.50
+|   |   |   |--- class: 1
+|   |--- OnlineShopping3M_True >  0.50
+|   |   |--- Age_>18-35 <= 0.50
+|   |   |   |--- class: 0
+|   |   |--- Age_>18-35 >  0.50
+|   |   |   |--- class: 1
+							</pre>
 						</div>
 					</div>
 
