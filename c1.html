@@ -55,7 +55,20 @@
 							Many consumer products, technology and services companies are looking at digital channels as an opportunity to transform themselves from operation/ technology into consumer company. Transforming to a consumer first organization requires fingerprinting consumers, understanding consumer behavior. More importantly, understand and improve the effectiveness of digital transformation through consumer engagement at segment level.
 							</p>
 							<span class="image main"><img src="images/c1/1.RFM.svg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
+							<p>A Recency, Frequency and Monetary (RFM) score framework provides a baseline method to aggregate consumer behavior and identify segments of consumers. The basic hypothesis is that consumers with high recency, frequency and monetary value are most valuable to a company. In the above example from a standard data set, the last three columns with high RFM value (>13) and Most Valuable consumer = True belong mostly to the High value segment (label). Programmatically the RFM, labels are defined as follows:</p>
+							
+							<pre>
+							df['R_Score']= pd.qcut(df.Recency,5, labels=[5,4,3,2,1]).astype(float)
+df['F_Score']= pd.qcut(df.Frequency,5, labels=[1,2,3,4,5]).astype(float)
+df['M_Score']= pd.qcut(df.Monetary,5,labels= [1,2,3,4,5]).astype(float)
+df['RFM']=df.R_Score+df.F_Score+ df.M_Score
+df['RFM_Score']= pd.qcut(df.RFM,5,labels= [1,2,3,4,5]).astype(float)
+# Most Valuable Consumers
+df['MVC']= df.RFM>= 13
+# Segments
+df['RFM_labels']= list(zip(np.where (df.R_Score >= 4, '1.Recent', '2.Not Recent'), np.where (df.F_Score >= 4, 'Frequent', 'Infrequent'), np.where (df.M_Score >= 4, 'Hi Value', 'Not Hi Value')))
+df['RFM_labels']= df.RFM_labels.agg('|'.join)
+							</pre>
 							
 						</div>
 					</div>
