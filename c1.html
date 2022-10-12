@@ -69,10 +69,10 @@ df['MVC']= df.RFM>= 13
 df['RFM_labels']= list(zip(np.where (df.R_Score >= 4, '1.Recent', '2.Not Recent'), np.where (df.F_Score >= 4, 'Frequent', 'Infrequent'), np.where (df.M_Score >= 4, 'Hi Value', 'Not Hi Value')))
 df['RFM_labels']= df.RFM_labels.agg('|'.join)
 							</pre>
-							<p> This is a easy means of segmenting behavior not only for consumers, but even for machines, app instances etc and can be derived across transaction (debit versus credit) and channel types. It's intuitive and easy to build and interprete
-							</p>
-							As variability in business environment and the complexity of consumer engagementgement increases, it then becomes imperative to consider a more robust technique. Clustering 
+							<p> This is a easy means of segmenting behavior not only for consumers, but even for machines, app instances etc and can be derived across transaction (debit versus credit) and channel types. It's intuitive and easy to build and interprete.
 							
+							As variability in business environment and the complexity of consumer engagementgement increases, it then becomes imperative to consider a more robust technique. Clustering consumers based on their omni channel behavior is a grea
+							</p>
 						</div>
 					</div>
 
