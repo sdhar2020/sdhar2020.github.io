@@ -58,7 +58,7 @@
 							<p>A Recency, Frequency and Monetary (RFM) score framework provides a baseline method to aggregate consumer behavior and identify segments of consumers. The basic hypothesis is that consumers with high recency, frequency and monetary value are most valuable to a company. In the above example from a standard data set, the last three columns with high RFM value (>13) and Most Valuable consumer = True belong mostly to the High value segment (label). Programmatically the RFM, labels are defined as follows:</p>
 							
 							<pre>
-							df['R_Score']= pd.qcut(df.Recency,5, labels=[5,4,3,2,1]).astype(float)
+df['R_Score']= pd.qcut(df.Recency,5, labels=[5,4,3,2,1]).astype(float)
 df['F_Score']= pd.qcut(df.Frequency,5, labels=[1,2,3,4,5]).astype(float)
 df['M_Score']= pd.qcut(df.Monetary,5,labels= [1,2,3,4,5]).astype(float)
 df['RFM']=df.R_Score+df.F_Score+ df.M_Score
