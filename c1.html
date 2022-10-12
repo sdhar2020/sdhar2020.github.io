@@ -78,8 +78,11 @@ df['RFM_labels']= df.RFM_labels.agg('|'.join)
 							<p> The above diagram is the result of clustering of the said RFM data. In diagram (a) the Elbow plot there is significant change in slope at K=3 and we choose to build the cluster for K=3. Diagram (b) is the two diensional representation of the multi dimensional space in the form of principal components (PCA). This shows 3 well formed clusters ina  wedged shaped profile. Investigating this furter, (c) is a quiver plot of the RFM feature vectors as projection on to the 2D PCA space. The Recency and the Monetary features are orthogonal to each other, meaning little or no correlation/ projection on each other. However, the Frequency and Monetary value features are very closely aligned. This is usually observed in scenario where product/ service catgeories or pricing variability within category is less.
 							</p>
 							<span class="image main"><img src="images/c1/3.Recency.svg" alt="" /></span>
+							<p> The above diagram shows the distribution of Recency values. cumulative probabiluty distribution of cluster= 2 clearly stands out. The box plot for recency for 2 shows hat the recency values are a lot higher than for both cluster 0,1. Why at all these 2 clusters are seperate is a good question. The answer lies in how K- means works- using a distance measure from a centroid to assign clusters to points. The observations are also true for Frequency and Monetary value as well
+							</p>
 							<span class="image main"><img src="images/c1/3.Frequency.svg" alt="" /></span>
 							<span class="image main"><img src="images/c1/3.Monetary.svg" alt="" /></span>
+							
 						</div>
 					</div>
 
