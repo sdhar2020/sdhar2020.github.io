@@ -95,7 +95,8 @@ df['RFM_labels']= df.RFM_labels.agg('|'.join)
 							<pre
 							<p> The following is the business rule that can be generated from the decision tree to score/ segment incoming consumers into a MVC/ Non MVC group
 							</p>
-							|--- YoungFamily_True <= 0.50
+							<pre>
+|--- YoungFamily_True <= 0.50
 |   |--- Income_>100K <= 0.50
 |   |   |--- Income_>70K-100K <= 0.50
 |   |   |   |--- class: 0
