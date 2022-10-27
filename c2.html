@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
+		<title>Forecasting & Prediction</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -50,31 +50,18 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Segmentation & Profiling</h1>
+							<h1>Forecasting & Prediction</h1>
 							<p>
-							Many products, technology and services companies are looking at digital channels as an opportunity to transform themselves from operation/ technology into consumer company. Transforming to a consumer first organization requires fingerprinting consumers, understanding consumer behavior. More importantly, understand and improve the effectiveness of digital transformation through consumer engagement at segment level. The following discourse runs through the art of the possible with respect to segmentation/ profiling.
+							Accurate Forecasting 
 							</p>
-							<h3>Recency, Frequency & Monetary (RFM) </h3>
-							<span class="image main"><img src="images/c1/1.RFM.svg" alt="" /></span>
-							<p>A Recency, Frequency and Monetary (RFM) framework provides a baseline method to aggregate consumer behavior and identify segments of consumers. The basic hypothesis is that consumers with high recency, frequency and monetary value are most valuable to a company. In the above example, the last three columns with <code> high RFM value (>13) and Most Valuable consumer = True </code> belong mostly to the High Recency/ Frequency/ Monetary segment as shown by RFM_label. Programmatically the RFM, labels and Most Valued Consumer (MVC) are defined as follows:</p>
-							<pre>
-df['R_Score']= pd.qcut(df.Recency,5, labels=[5,4,3,2,1]).astype(float)
-df['F_Score']= pd.qcut(df.Frequency,5, labels=[1,2,3,4,5]).astype(float)
-df['M_Score']= pd.qcut(df.Monetary,5,labels= [1,2,3,4,5]).astype(float)
-df['RFM']=df.R_Score+df.F_Score+ df.M_Score
-df['RFM_Score']= pd.qcut(df.RFM,5,labels= [1,2,3,4,5]).astype(float)
-# Most Valuable Consumers
-df['MVC']= df.RFM>= 13
-# Segments
-df['RFM_labels']= list(zip(np.where (df.R_Score >= 4, '1.Recent', '2.Not Recent'), np.where (df.F_Score >= 4, 'Frequent', 'Infrequent'), np.where (df.M_Score >= 4, 'Hi Value', 'Not Hi Value')))
-df['RFM_labels']= df.RFM_labels.agg('|'.join)
-							</pre>
-							<p> This is a easy means of segmenting behavior not only for consumers, but even for machines, app instances etc and can be derived across transaction (debit versus credit) and channel types. It's intuitive and easy to build and interprete. Not just to answer marketing questions but to help operations to isolate cohorts of faltering devices in a fleet.
+							<h3> Forecasting</h3>
+							<span class="image main"><img src="images/c2/1.TrainTest.svg" alt="" /></span>
+							<p>A Recency</p>
 							
-							As variability in business environment and the complexity of consumer engagementgement increases, it becomes imperative to consider more robust technique. Using unsupervised learning to cluster consumers using their omni channel behavior can be interesting approach. While not awefully sophisticated K-Means clustering works well with data for few thousand to a few hundred thousand consumers
+							<p> This is 
 							</p>
-							<h3> K- Means Clustering </h3>
-							<span class="image main"><img src="images/c1/2.cluster.svg" alt="" /></span>
+							<h3> Rolling Means </h3>
+							<span class="image main"><img src="images/c2/2.Rolling Means.svg" alt="" /></span>
 							<p> The above diagram is the result of clustering of the said RFM data as mentioned earlier. In diagram (a) the Elbow plot shows significant change in slope at K=3 and we choose to build the cluster for K=3. Diagram (b) is the two diensional representation of the multi dimensional space in the form of principal components (PCA). This shows 3 well formed clusters in a wedged shaped profile. Investigating this furter, (c) is a quiver plot of the RFM feature vectors as projection on to the 2D PCA space. The Recency and the Monetary features are orthogonal to each other, meaning little or no correlation/ projection on each other. However, the Frequency and Monetary value features are very closely aligned. This is usually observed in scenario where product/ service catgeories or pricing variability within category is less.
 							</p>
 							<span class="image main"><img src="images/c1/3.Recency.svg" alt="" /></span>
