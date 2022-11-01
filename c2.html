@@ -67,50 +67,6 @@
 							<span class="image main"><img src="images/c2/3.EDA.svg" alt="" /></span>
 							<p> The above diagram 
 							</p>
-							<span class="image main"><img src="images/c1/3.Frequency.svg" alt="" /></span>
-							<span class="image main"><img src="images/c1/3.Monetary.svg" alt="" /></span>
-							<h2> Heuristics versus Machine Learning </h2>
-							<span class="image main"><img src="images/c1/4.KMC_RFM.svg" alt="" /></span>
-							<p> Merging the RFM segment and the K-Means clusters provides interesting insights. <code> Cluser=2 </code> nominally coincides with MVC consumers. So far we answered the question "what" have they done? "How" have a purchased? Not so much the "who?" question. The "who" question can be answered through profiling the consumer data</p>
-							<h2>Profiling </h2>
-							<p>To demonstrate how profiling works we shall interprete and try to answer the "who?" question for cluster=2. For a recent convert, it is hard to get an abundance of consumer profile information. There are legal nd privacy issues as well. Some industries may mandate the capture of certain consumer profile data but in most cases there are stipulations around how not to use them. More importantly, the MAANG companies over time have acquirdd vast quantities of consumer profile, psychographics, demographics information through permission and use the data in heir own ad marketing programs. There are data providers who seek to provide high quality primary data about consumers. In our example we choose 5 basic variables whose distributions with respect to MVC are shown below</p>
-							<span class="image main"><img src="images/c1/5.bar.svg" alt="" /></span>
-							<p> It does appear that MVCs are distributed in certain pockets of the consumer base. A standard way to profile consmers of a certain segment is to classify them against other segments- MVCs versus non-MVC for example. A simple Decision Tree with <code> max_depth=4 </code> has been developed for illustrative purposes</p>
-							<span class="image main"><img src="images/c1/6.tree.svg" alt="" /></span>
-							<p> While this model can be significantly improved and generalized through ensembling and hyper-parameter tuning, the current decision tree has some interesting insights. The classification criteria used here is entropy function and the split decision uses information gain. The value of Entropy function is between 0 an 1. 1 signified complete disorder and 0 means complete order. The right hand most bottom leaf has a entropy of ~.7 translating to about 80% of the node to be MVCs. This just shows that personas fulfilling certain criteria may be valuable in the future. Generalized business rules can be generated from the tree.
-							</p>
-							<p> The following is the business rule that can be generated from the decision tree to score/ segment incoming consumers into a MVC/ Non MVC group
-							</p>
-							<pre>
-|--- YoungFamily_True <= 0.50
-|   |--- Income_>100K <= 0.50
-|   |   |--- Income_>70K-100K <= 0.50
-|   |   |   |--- class: 0
-|   |   |--- Income_>70K-100K >  0.50
-|   |   |   |--- class: 0
-|   |--- Income_>100K >  0.50
-|   |   |--- class: 0
-|--- YoungFamily_True >  0.50
-|   |--- OnlineShopping3M_True <= 0.50
-|   |   |--- Income_>100K <= 0.50
-|   |   |   |--- class: 0
-|   |   |--- Income_>100K >  0.50
-|   |   |   |--- class: 1
-|   |--- OnlineShopping3M_True >  0.50
-|   |   |--- Age_>18-35 <= 0.50
-|   |   |   |--- class: 0
-|   |   |--- Age_>18-35 >  0.50
-|   |   |   |--- class: 1
-							</pre>
-							<h2>OK, so what's the point of all this? </h2>
-							<p> As companies transform digitaly and onboard identifiable consumers, it is neccessary to identify groups in the population of newly acquired consumers are performant and improvments over the non-consumer lines of business. Customer segmentation using hyper dimensional clustering techniques helps to create groups of equivalent consumers in a loss function optimized framework. Once that is achieved and clusters determined, it is necessary to understand who they are. That helps in two ways:							
-							</p>
-							<ul>
-							<li>Fine tune product, service value proposition for specific consumer persona</li>
-							<li>Target newly acquired consumers personas with offers when purchase patterns are not available based on historical performance</li>
-							</ul>
-							<p> In our case we can look at the business rule to see that  <code> Young Family, aged betweeb 18-35 and who shopped online in the past 3 months</code> are MVCs
-							<p> <i> ( The spirit of this work is from a recently concluded Data Science engagement, the base RFM data is generally available online and the consumer profile information is engineered with bit of imagination!</i> </p>
 							
 						</div>
 					</div>
