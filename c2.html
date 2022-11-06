@@ -148,9 +148,7 @@
 	ridgecv = RidgeCV(alphas = alphas, scoring = 'neg_mean_absolute_error', normalize = True, cv= ts_cv).fit(X_train, y_train)
 							</pre>
 							<span class="image main"><img src="images/c2/8.RegCoeff1yr.svg" alt="" /></span>
-							<p> The above diagram is a heatmap of the coefficents of the features in the ridge regression. Until a year worth of training data is available the values flip flop and appears unstable after that the values appear consistent. The Top 10 features with highest significance are- <code> ['var1', 'windspeed', 'Mnth_spline_2', 'Mnth_spline_5', 'Month_cos',
-       'temperature', 'Mnth_spline_4', 'var2_B hr_spline_10', 'Month_sin',
-       'var2_B hr_spline_2'] </code>
+							<p> The above diagram is a heatmap of the coefficents of the features in the ridge regression. Until a year worth of training data is available the values flip flop and appears unstable after that the values appear consistent. The Top 10 features with highest significance are- <pre> ['var1', 'windspeed', 'Mnth_spline_2', 'Mnth_spline_5', 'Month_cos', 'temperature', 'Mnth_spline, 'var2_B hr_spline_10', 'Month_sin',  'var2_B hr_spline_2'] </pre>
 							</p>
 							<span class="image main"><img src="images/c2/9.MAEMAPE by TrainSegment i1 yr.svg" alt="" /></span>
 							<p> The MAE value improves after the 13th time segment presumably because of the longer term history helps in stabilizing thre score. The MAE isn't bad after the 12th time segment and stabilizes about ~.045. This isn't bad but works well when the long term signal is isolated from the data using thus model
