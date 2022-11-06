@@ -139,6 +139,7 @@
 							<p> The long term window model looks back a maximum of one year of hourly data and has the following general formulation:
 							</p>
 							<pre>
+	alphas = np.logspace(-10, 6, 25)
 	ts_cv = TimeSeriesSplit(
 		n_splits=5,
 		gap=48,
@@ -156,9 +157,21 @@
 							<p> The MAE value improves after the 13th time segment presumably because of the longer term history helps in stabilizing thre score. The MAE isn't bad after the 12th time segment and stabilizes about ~.045. This isn't bad but works well when the long term signal is isolated from the data using thus model
 							</p>
 							<span class="image main"><img src="images/c2/10.Max1yrPreds.svg" alt="" /></span>
+							<p> The above is the long term prediction of the test regimes across 47 models developed for each time segment in test. The predictions are all based on the best parameter optimization using MAE as a metric
 							<h4> Short Term Window </h4>
+							<p> The short term model is based on maximum look back of 3 weeks. This model will probably be less resilliant to short term noises unlike the Long term model. The cross validation time split is as follows:
+							<pre>
+	ts_cv = TimeSeriesSplit(
+		n_splits=5,
+		gap=48,
+		max_train_size= 1*int(.9*552),
+		test_size= int(.1*552)
+    )
+							</pre
 							<span class="image main"><img src="images/c2/11.RidgeCoeffs21days window.svg" alt="" /></span>
+							<p> The feature weights appear very unstable and keeps changing their weights and as a result importance. 
 							<span class="image main"><img src="images/c2/12.Error21days.svg" alt="" /></span>
+							<p> Overall the Expalined Variance is better in some cases. but the MAE is lower than the long term model.
 							<span class="image main"><img src="images/c2/13.RidgePred21days.svg" alt="" /></span>
 							
 						</div>
