@@ -119,15 +119,18 @@
 							<h3> Feature Engineering </h3>
 							<p> A total of ~85 features have been used in this exercise. The important classes are as follows:
 							</p>
-							<span class="image main"><img src="images/c2/7.Periodicfeatures.svg" alt="" /></span>
+							
 							<ol start="1">
 							<li> Base multivariate features: <code> 'temperature', 'var1', 'pressure', 'windspeed' </code> </li>
 							<li> Time related features such as: <code> 'Year', 'Month', 'Week', 'WeekDay', 'Hour' </code>  </li>
-							<li> Trigonometric features such as to capcture cyclicity: <code> 'hour_sin', 'hour_cos', 'WeekDay_sin', 'WeekDay_cos', 'Month_sin' </code>  as in the upper graph above</li>
-							<li> Spline features: Example <code> 'hr_spline_0', 'hr_spline_1', 'hr_spline_2', 'hr_spline_3' </code>  etc as shown in the lower graph above</li>
+							<li> Trigonometric features such as to capcture cyclicity: <code> 'hour_sin', 'hour_cos', 'WeekDay_sin', 'WeekDay_cos', 'Month_sin' </code>  as in the upper graph below</li>
+							<li> Spline features: Example <code> 'hr_spline_0', 'hr_spline_1', 'hr_spline_2', 'hr_spline_3' </code>  etc as shown in the lower graph below</li>
+							<li> New binary features such as <code> 'Holiday', 'Weekend' </code> </li>
+							<li> One hot encoded variables <code> 'var2_B', 'var2_C' </code> </li>
+							<li> 50 oddd interaction variables between Hourly spline variables and categorical and binary variables to capture spikes and throughs as the case may be due to interactions </li>
 							
 							</ol>
-							
+							<span class="image main"><img src="images/c2/7.Periodicfeatures.svg" alt="" /></span>
 							<p> </p>
 							<h3> Prediction </h3>
 							<h4> Long Term Window </h4>
