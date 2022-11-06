@@ -136,7 +136,8 @@
 							<p> There were two sets of model developed one looking at long term data and the other looking at short term performance. Both models use <code> RidgeCV </code> to optimize the <code> Mean Absolute Error </code> in a K= 5 cross validating frame work for each of the 48 time segments.
 							</p>
 							<h4> Long Term Window </h4>
-							The long term window model looks back a maximum of one year of hourly data and has the following general formulation:
+							<p> The long term window model looks back a maximum of one year of hourly data and has the following general formulation:
+							</p>
 							<pre>
 							  ts_cv = TimeSeriesSplit(
     n_splits=5,
