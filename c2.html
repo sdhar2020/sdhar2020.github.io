@@ -169,11 +169,19 @@
     )
 							</pre
 							<span class="image main"><img src="images/c2/11.RidgeCoeffs21days window.svg" alt="" /></span>
-							<p> The feature weights appear very unstable and keeps changing their weights and as a result importance. 
+							<p> The feature weights appear very unstable and keeps changing their weights and as a result importance </p>
 							<span class="image main"><img src="images/c2/12.Error21days.svg" alt="" /></span>
-							<p> Overall the Expalined Variance is better in some cases. but the MAE is lower than the long term model.
+							<p> Overall the Explained Variance is better in some cases. but the MAE is lower than the long term model. </p>
 							<span class="image main"><img src="images/c2/13.RidgePred21days.svg" alt="" /></span>
+							<p> The short term model vissually appears to have mapped to the ups and downs better in some places than the long term model even though the overall error is higher. </p>
+							<h2> opportunistic emsemble </h2>
+							<p> So what is the final solution?
 							
+							Run the models at each tiem segment and compare the MAE and choose the model that shows better MAE as this is the metric that has been used for optimization
+							
+							The error profile is given in the diagram below. Indeed there can be more investgation done to improve the error rate on this.
+							</p>
+							<span class="image main"><img src="images/c2/ensembleerror.svg" alt="" /></span>
 						</div>
 					</div>
 
