@@ -139,15 +139,13 @@
 							<p> The long term window model looks back a maximum of one year of hourly data and has the following general formulation:
 							</p>
 							<pre>
-							  ts_cv = TimeSeriesSplit(
-    n_splits=5,
-    gap=48,
-    max_train_size= max(8760/4,int(.9*len(X_train))),
-    # min(int(.85*len(X_train)), 3*21*24),
-    test_size= int(.1*len(X_train))
-    # min(int(.1*len(X_train)), 21*24)
-    )
-  ridgecv = RidgeCV(alphas = alphas, scoring = 'neg_mean_absolute_error', normalize = True, cv= ts_cv).fit(X_train, y_train)
+	ts_cv = TimeSeriesSplit(
+		n_splits=5,
+		gap=48,
+		max_train_size= max(8760/4,int(.9*len(X_train))),
+		test_size= int(.1*len(X_train))
+		)
+	ridgecv = RidgeCV(alphas = alphas, scoring = 'neg_mean_absolute_error', normalize = True, cv= ts_cv).fit(X_train, y_train)
 							</pre>
 							<span class="image main"><img src="images/c2/8.RegCoeff1yr.svg" alt="" /></span>
 							<span class="image main"><img src="images/c2/9.MAEMAPE by TrainSegment i1 yr.svg" alt="" /></span>
