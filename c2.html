@@ -61,10 +61,11 @@
 							<li>Categorical encodings of key drivers and barriers of demand, not just temporal seasonal changes</li>
 							<li>Clear understanding of attributable business initiaitves that lead to improved demand</li>
 							<li>Robust pipeline for ingestion, quality assurance and orchestration- every time step of prediction is usually like a new prediction problem and needs automation</li>
+							<li> Model decisions that don't violate causality and validation consistent with the direction of time 
 							</ol>
 							<p> Then offcourse there are unforeseen drivers such as COVID-19 pandemic and the war in Ukraine. Predicting the future in such situations require playing out <i> "what if?"</i> scnerios on historical data to curate specific facets of historical data to see how the lomg term trend gets affected. And this is really where business knowledge plays a role more so than any machine learnign techniques</p>
 							
-							<p> Some of the reasons why Forecasting projects fail but not limited to are as follows:
+							<p> Some of the reasons (but not limited to) why Forecasting projects fail  are as follows:
 							</p>
 							 <ol>
 							<li>Poor choice of target metrics. A Forecasting target metrics ought to be atomic and granular and seldom compound corporate KPIs make great candidates</li>
@@ -72,9 +73,12 @@
 							<li>Univariate timeseries models are often used as a quick way to get around challenges of acquiring multivariate data and leads to sub par performance</li>
 							</ol>
 							<h2> Illustrative Example</h2>
+							<p> The example below is from a energy consumption forecasting use case. The energy consumption is for circa 4 years at an hourly level
+							</p>
 							<span class="image main"><img src="images/c2/1.TrainTest.svg" alt="" /></span>
 							
-							<p> </p>
+							<p> The problem is predict the energy consumption for the test set that is intersparsed across all 4 years for different lengths of time at an hourly level. These are the biege colored vertical lines in the above figure. 
+							</p>
 							
 							
 							<span class="image main"><img src="images/c2/2.TestTrainStacked.svg" alt="" /></span>
