@@ -107,19 +107,27 @@
 							<li> pressure and consumption shows little relationship</li>
 							<li> Temperature shows linear decreasing relationship 
 							</li>
-							<li> Same applies for var1
+							<li> Same applies for var1 </li>
 							</ol>
 							<span class="image main"><img src="images/c2/6.timeagg.svg" alt="" /></span>
 							<p> The monthly, quarterly means don't show any significant trend however towards the end the consumption pattern shows more variations around the long term mean. The standard deviation although range bound shows variation as a result some heteroscadasticity
 							</p>
 							<h2> Model Development </h2>
 							<p>
-							Instead of pruning the variables at the get go, a time segment wise regularized Ridge Regression models were developed in a harness. As new time segments may get added the deployed model shall develop a new model and score the most recent time segment based on history.
+							Instead of pruning the variables at the get go, time segment wise regularized Ridge Regression models were developed in as a training harness as sci-kit learn <code> make_pipeline() </code>. As new time segments may get added the deployed model shall develop a new model and score the most recent time segment based on history.
 							</p>
 							<h3> Feature Engineering </h3>
-							<p> A total of 91 features were 
+							<p> A total of ~85 features have been used in this exercise. The important classes are as follows:
 							</p>
 							<span class="image main"><img src="images/c2/7.Periodicfeatures.svg" alt="" /></span>
+							<ol start="1">
+							<li> Base multivariate features: <code> 'temperature', 'var1', 'pressure', 'windspeed' </code> </li>
+							<li> Time related features such as: <code> 'Year', 'Month', 'Week', 'WeekDay', 'Hour' </code>  </li>
+							<li> Trigonometric features such as to capcture cyclicity: <code> 'hour_sin', 'hour_cos', 'WeekDay_sin', 'WeekDay_cos', 'Month_sin' </code>  as in the upper graph above</li>
+							<li> Spline features: Example <code> 'hr_spline_0', 'hr_spline_1', 'hr_spline_2', 'hr_spline_3' </code>  etc as shown in the lower graph above</li>
+							
+							</ol>
+							
 							<p> </p>
 							<h3> Prediction </h3>
 							<h4> Long Term Window </h4>
