@@ -54,22 +54,22 @@
 							
 							<h2> Forecasting</h2>
 							<p>
-							Accurate Forecasting improves the predictabilty in the business envionment. Ability to predict the future based on past trend helps in planning, business budgeting and goal setting. The ability to accurately predict future demand and business size depends on the following:
+							Accurate Forecasting improves the predictabilty in the business environment. Ability to predict the future based on past trend helps in planning, business budgeting and goal setting. The ability to accurately predict future demand and business size depends on the following:
 							</p>
 							<ol>
-							<li>Historical data of time varying signature that has relevant and representative of trends, seasons and cycles</li>
-							<li>Categorical encodings of key drivers and barriers of demand, not just temporal seasonal changes</li>
+							<li>Historical data of time varying signature of a SMART metric that has relevant and representative of trends, seasonlity and cycles</li>
+							<li>Categorical- nominal and orfinal encodings of key drivers and barriers of demand, not just temporal seasonal changes</li>
 							<li>Clear understanding of attributable business initiaitves that lead to improved demand</li>
-							<li>Robust pipeline for ingestion, quality assurance and orchestration- every time step of prediction is usually like a new prediction problem and needs automation</li>
-							<li> Model decisions that don't violate causality and validation consistent with the direction of time 
+							<li>Robust pipeline for ingestion, quality assurance and orchestration- every time step of prediction is a new prediction problem and needs automation </li>
+							<li> Model decisions that don't violate causality and is validated in a consistent manner along the direction of time 
 							</ol>
-							<p> Then offcourse there are unforeseen drivers such as COVID-19 pandemic and the war in Ukraine. Predicting the future in such situations require playing out <i> "what if?"</i> scnerios on historical data to curate specific facets of historical data to see how the lomg term trend gets affected. And this is really where business knowledge plays a role more so than any machine learnign techniques</p>
+							<p> Then offcourse there are unforeseen drivers such as COVID-19 pandemic and the war in Ukraine. Predicting the future in such situations require playing out <i> "what if?"</i> scnerios on historical data to curate specific facets of history to see how the long term trend gets affected. And this is really where business heuristics plays a role more so than any machine learnign techniques</p>
 							
-							<p> Some of the reasons (but not limited to) why Forecasting projects fail  are as follows:
+							<p> Some of the reasons (but not limited to) why forecasting projects fail  are as follows:
 							</p>
 							 <ol>
 							<li>Poor choice of target metrics. A Forecasting target metrics ought to be atomic and granular and seldom compound corporate KPIs make great candidates</li>
-							<li>Upstream data quality in all likelyhood shall play havoc in stability and reliability of prediction in </li>
+							<li>Upstream data quality in all likelyhood shall play havoc in stability and reliability of prediction into the future. A instable pipeline is a great learning opportunity but isn't all that successful in business support</li>
 							<li>Univariate timeseries models are often used as a quick way to get around challenges of acquiring multivariate data and leads to sub par performance</li>
 							</ol>
 							<h2> Illustrative Example</h2>
@@ -83,17 +83,17 @@
 							
 							<h3> Prediction Topology</h3>
 							<span class="image main"><img src="images/c2/2.TestTrainStacked.svg" alt="" /></span>
-							<p> The above diagram is a compact way to visualize the prediction problem at hand. The bars are stacked count of data points in time that is consistent with causality- the orange are the group of points in test and the blue is the count of datetime data points in Training that precedes them. In effect for building prediction for each orange set the preceding blue set is to be used.
+							<p> The above diagram is a compact way to visualize the prediction problem at hand. The bars are stacked count of data points in time that is consistent with causality- the orange are the group of points in test and the blue is the count of datetime data points in Training that precedes them. In effect for building prediction for each orange set the preceding blue set need be used.
 							</p>
-							<p> Overall, this problem is akin to building weekly/daily forecasts based on previous business performance and demand. As more history gets accumulated the ability to produce more accurate predictions improves into the future. For example in the 0th time segmnt the train/ set set sizes are almost similar whereas in the 47th time segment you nearly have 4 years worth history to predict circa 22 days.
+							<p> Overall, this problem is akin to building weekly/daily forecasts based on previous business performance and demand. As more history gets accumulated the ability to produce more accurate predictions improves into the future. For example in the 0th time segmnt the train/ set set sizes are almost similar whereas in the 47th time segment you nearly have 4 years worth history to predict circa 22 days- emcompassing long and short term signals
 							</p>
 							
 							<h3> Exploratory Analysis </h3>
 							<span class="image main"><img src="images/c2/3.Hist.svg" alt="" /></span>
 							<ol start="1">
-							<li>The histogram shows the consumotion metric renderd by a categorical variable with values A,B and C. It's data dictionary didn't sate what this is and it looks like values B,C are sparse meaning without some kind of sampling approach it is unlikely we shall see much stand alone impact in the prediction algorithm </li>
-							<li>This bar graph shows the distribution of consumption across each day of the week, rendered by non working days. 5, 6 being Saturday and Sunday. It appears holidays in weekdays leads to higher consumption. A mental note to create a feature for holdiays..</li>
-							<li>The heatmap shows weekends late in the night shows increased consumption and week days after midday shows lower load. This appears counter intuitive but each use case has it's own nicetities that we need to build on</li>
+							<li>The histogram shows the consumption metric renderd by a categorical variable var2 with values A,B and C. It's data dictionary didn't sate what this is and it looks like values B,C are sparse meaning without some kind of sampling approach it is unlikely we shall see much stand alone impact in the prediction algorithm </li>
+							<li>This bar graph shows the distribution of consumption across each day of the week, rendered by non working days. 5, 6 being Saturday and Sunday. It appears holidays in weekdays leads to higher consumption. A mental note to create a feature for holidays.</li>
+							<li>The heatmap shows weekends late in the night shows increased consumption and week days after midday shows lower load. This appears counter intuitive but each use case has it's own nicetities that we need to build on. 4 years of history provides us history to geenralize on</li>
 							</ol>
 							<span class="image main"><img src="images/c2/4.Scater.svg" alt="" /></span>
 							<ol start="4">
@@ -104,10 +104,9 @@
 							</ol>
 							<span class="image main"><img src="images/c2/5.Regplot.svg" alt="" /></span>
 							<ol start="7">
-							<li> pressure and consumption shows little relationship</li>
-							<li> Temperature shows linear decreasing relationship 
+							<li> pressure and consumption shows little relationship wth each other</li>
+							<li> Temperature shows linear decreasing relationship wth each other. Ditto for var1
 							</li>
-							<li> Same applies for var1 </li>
 							</ol>
 							<span class="image main"><img src="images/c2/6.timeagg.svg" alt="" /></span>
 							<p> The monthly, quarterly means don't show any significant trend however towards the end the consumption pattern shows more variations around the long term mean. The standard deviation although range bound shows variation as a result some heteroscadasticity
