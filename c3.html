@@ -54,15 +54,20 @@
 							
 							<h2> Customer Churn</h2>
 							<p>
-							As of September 2021, a rough estimate for CAC could range from $50 to $300 or more per customer (personal communications, Chat GPT August 2023). A general guideline for a good attrition rate for subscription-based online businesses was typically around 5% per month. However, it's essential to note that what constitutes a "good" attrition rate can differ significantly between industries, business model, engagement activities, competitive actions, pricing, value propositiona and service quality.
+							As of September 2021, a rough estimate for CAC could range from $50 to $300 or more per customer (personal communications, Chat GPT August 2023). A general guideline for a good attrition rate for subscription-based online businesses was typically around 5% per month. However, it's essential to note that what constitutes a "good" attrition rate can differ significantly between industries, business model, engagement activities, competitive actions, pricing, value propositiona and service quality. Predicting and reducing customer churn or attrition is a interesting challenge.
+							
+							Considerations around causality related Issues in predicting customer churn is key. Some of them are as follows:
 							</p>
-							<ol>
-							<li>Historical data of time varying signature of a SMART metric that has relevant and representative of trends, seasonlity and cycles</li>
-							<li>Categorical- nominal and orfinal encodings of key drivers and barriers of demand, not just temporal seasonal changes</li>
-							<li>Clear understanding of attributable business initiaitves that lead to improved demand</li>
-							<li>Robust pipeline for ingestion, quality assurance and orchestration- every time step of prediction is a new prediction problem and needs automation </li>
-							<li> Model decisions that don't violate causality and is validated in a consistent manner along the direction of time 
-							</ol>
+							 <ul>
+								<li>Correlation vs. Causation: Distinguishing between correlated factors and actual causes of churn.</li>
+								<li>Confounding Variables: Identifying and accounting for variables that may distort causal relationships.</li>
+								<li>Time Lag: Dealing with time delays between causes and the manifestation of churn.</li>
+								<li>Reverse Causality: Recognizing situations where churn itself influences the identified causes.</li>
+								<li>Hidden Causes: Discovering latent or unobservable factors contributing to churn.</li>
+								<li>Feedback Loops: Handling situations where churn and its causes create feedback loops.</li>
+								<li>Interventions: Understanding how interventions to reduce churn may impact causal relationships.</li>
+								<li>Data Quality: Ensuring that data used to establish causal links is accurate and comprehensive.</li>
+    </ul>
 							<p> Then offcourse there are unforeseen drivers such as COVID-19 pandemic and the war in Ukraine. Predicting the future in such situations require playing out <i> "what if?"</i> scnerios on historical data to curate specific facets of history to see how the long term trend gets affected. And this is really where business heuristics plays a role more so than any machine learnign techniques</p>
 							
 							<p> Some of the reasons (but not limited to) why forecasting projects fail  are as follows:
