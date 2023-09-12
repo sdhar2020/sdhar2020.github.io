@@ -105,112 +105,19 @@
   <li>Iterate: Depending on the outcomes, you may iterate and conduct further A/B tests to refine your strategies and continuously improve the user experience.</li>
 </ul>
  <p> These steps allow you to effectively split your target audience into multiple A/B test groups and assess the impact of different variations on user behavior and outcomes. </p>
-
-
-
-
-
-
-
-							
-							<div>
-								<object data="images/c3/churn.svg" type="image/svg+xml" width="900" height="600">
-								</object>
-							</div>
-							
-							
-							<h2> Introducing the problem</h2>
-							
-							<p> The problem at hand is from the Fintech industry and that of a payments app that is used for paying in a hyperlocal market. While finger printing the consumers is easy it is often hard to understand what leads to early adopter disengagement. Thanks to the subject nature of the problem there is a plethora of streaming data that can be captured in big data system such as (but not limited to) app related issues, wallet charging related issues, balance in wallet, first transaction time frame, open marketing offers etc.
-							</p>
-							
-							<p> Overall, this problem looking at history of consumer experiences and then behavior and building prediction to predict in the future. Therefore, if low wallet balance in the past has lead to zero transaction in more recent times, the model generalizes that current low balances increasesw the probability in the future. Since the market is hyperlocal consumer profiles such as age, gender, purchase profiles are not great predictor of variability
-							</p>
-							<p> The goal is to build a machine learning classification model that can predict probability of churn in current customers based on behavior of attrition in the past. Meaning Probability of 'No future interaction' </p>
-							
-							<h2> Exploratory Analysis </h2>
-								<object data="images/c3/hist.svg" type="image/svg+xml" width="900" height="600">
-								</object>
-							<p> Univariate visualization can show some interest insights. Such as, low balance (<= $5) shows higher proportion of churn, similarly consumers with > 30 of Length of Relationship tend to churn less </p>
-								<object data="images/c3/bivar.svg" type="image/svg+xml" width="900" height="600">
-								</object>
-							<p> The bivariate jointplot shoes a ellipsoidal area with large concentration of churns. This is perhaps due to interaction of two bimodal distribution </p>
-						
-							<h2> Predicting Churn </h2>
-							<p>
-							Three machine learning models- logistic regression, random forest, xhboost for  binary classification are developed with hyperparameters fitting using and f1 score is used as quality metric. The following are the ROC curves
-							</p>
-							<object data="images/c3/roc.svg" type="image/svg+xml" width="900" height="600">
-								</object>
-							<p>
-							The following are the classification metrics:
-							</p>
-							<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>scorer</th>
-      <th>train_f1_score</th>
-      <th>train_auc_score</th>
-      <th>train_precision</th>
-      <th>train_recall</th>
-      <th>test_f1_score</th>
-      <th>test_auc_score</th>
-      <th>test_precision</th>
-      <th>test_recall</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Logistic Regression</td>
-      <td>0.729809</td>
-      <td>0.724550</td>
-      <td>0.716133</td>
-      <td>0.74405</td>
-      <td>0.203343</td>
-      <td>0.800579</td>
-      <td>0.118699</td>
-      <td>0.118699</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Random Forest</td>
-      <td>0.990381</td>
-      <td>0.990283</td>
-      <td>0.980957</td>
-      <td>1.00000</td>
-      <td>0.556150</td>
-      <td>0.875905</td>
-      <td>0.619048</td>
-      <td>0.619048</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>XGBoost</td>
-      <td>0.985542</td>
-      <td>0.985325</td>
-      <td>0.971506</td>
-      <td>1.00000</td>
-      <td>0.553191</td>
-      <td>0.882587</td>
-      <td>0.492424</td>
-      <td>0.492424</td>
-    </tr>
-  </tbody>
-</table>
-							
-							<p> The recall rate is key as this determines ability to target with retention engagement. The model to be used is determined by factors such as budget. In this case the Random Forest model ought to be used </p>
-							<object data="images/c3/cfm.svg" type="image/svg+xml" width="900" height="600"></object>
-							<h2> Recall Rate </h2>
-							<p> The recall rate clearly needs to be maximized in the current context. The following steps can be used as next steps:
-							</p>
-							<ul>
-        <li><strong>Data Augmentation:</strong> Increase the representation of the minority class by generating synthetic data points or using techniques like SMOTE (Synthetic Minority Over-sampling Technique).</li>
-        <li><strong>Feature Engineering:</strong> Carefully select and engineer features that highlight important patterns and characteristics of both classes, aiding the model's ability to distinguish between them.</li>
-        <li><strong>Algorithm Selection:</strong> Choose algorithms that are well-suited for imbalanced datasets, such as Random Forests, Gradient Boosting, or Support Vector Machines, as they can capture complex relationships better.</li>
-        <li><strong>Threshold Adjustment:</strong> Modify the classification threshold to prioritize recall over precision, particularly when false negatives are more costly than false positives.</li>
-        <li><strong>Ensemble Methods:</strong> Combine multiple models, such as bagging or boosting, to improve overall performance and recall by leveraging the strengths of different algorithms or subsets of the data.</li>
+ 
+  <h2>Statistical Tests for A/B Test Significance</h2>
+    
+    <ul>
+        <li><strong>T-Test:</strong> Commonly used to compare the means of two groups to determine if there is a statistically significant difference.</li>
+        <li><strong>Welch's T-Test:</strong> A variation of the T-Test that does not assume equal variances between groups.</li>
+        <li><strong>Chi-Squared Test:</strong> Used for categorical data to assess if there's an association or difference in proportions between groups.</li>
+        <li><strong>Mann-Whitney U Test:</strong> Non-parametric test for comparing the distributions of two groups when assumptions of normality are not met.</li>
+        <li><strong>Analysis of Variance (ANOVA):</strong> Extends the T-Test to more than two groups to determine if there are significant differences among group means.</li>
+        <li><strong>Kruskal-Wallis Test:</strong> Non-parametric alternative to ANOVA when assumptions of normality are not met.</li>
+        <li><strong>Chi-Squared Goodness of Fit Test:</strong> Used to compare observed and expected frequencies in one group, often used for A/B tests with multiple variations.</li>
+        <li><strong>Paired T-Test:</strong> Compares the means of paired or dependent samples, useful for before-and-after A/B tests.</li>
+        <li><strong>Sequential Testing:</strong> Adaptive testing methods that allow for ongoing monitoring of A/B tests and early stopping if significance is reached.</li>
     </ul>
 						</div>
 					</div>
