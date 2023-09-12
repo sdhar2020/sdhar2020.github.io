@@ -98,10 +98,12 @@
 							
 							<p> The bivariate jointplot shoes a ellipsoidal area with large concentration of churns. This is perhaps due to interaction of two bimodal distribution </p>
 						
-							<h2> Model Development </h2>
+							<h2> Predicting Churn </h2>
 							<p>
-							Instead of pruning the variables at the get go, time segment wise regularized Ridge Regression models were developed in as a training harness as sci-kit learn <code> make_pipeline() </code>. As new time segments may get added the deployed model shall develop a new model and score the most recent time segment based on history.
+							Three machine learning models- logistic regression, random forest, xhboost for  binary classification are developed with hyperparameters fitting using and f1 score is used as quality metric. The following are the ROC curves
 							</p>
+							<object data="images/c3/roc.svg" type="image/svg+xml" width="900" height="600">
+								</object>
 							<h3> Feature Engineering </h3>
 							<p> A total of ~85 features have been used in this exercise. The important classes are as follows:
 							</p>
