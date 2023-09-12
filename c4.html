@@ -62,15 +62,15 @@
     <ol>
         <li><strong>Data Segmentation:</strong> Ensure that you have clean and well-segmented data based on geographic regions and device types.</li>
 
-        <li><strong>Random Sampling:</strong> Implement random sampling to select participants for each variant within the defined geographic regions and device types.</li>
+        <li><strong>Random Sampling:</strong> Implement stratefied random sampling to select participants for each variant within the defined geographic regions and device types.</li>
 
         <li><strong>Geo-Targeting Accuracy:</strong> Verify the accuracy of your geo-targeting to ensure that users are correctly assigned to their respective regions.</li>
 
         <li><strong>Device Detection:</strong> Implement reliable device detection to accurately categorize users based on the type of device they are using.</li>
 
-        <li><strong>Consistency in Testing Environment:</strong> Ensure that the testing environment is consistent across different geographic regions and device types.</li>
+        <li><strong>Consistency in Testing Environment:</strong> Ensure that the testing environment is consistent across different geographic regions and device types. Make operational adjustments as required</li>
 
-        <li><strong>Time Zone Considerations:</strong> Be aware of time zone differences when analyzing the results of geo-targeted campaigns.</li>
+        <li><strong>Time Zone Considerations:</strong> Be aware of time zone differences when analyzing the results of geo-targeted campaigns. Normalize to GMT</li>
 
         <li><strong>Traffic Volume Monitoring:</strong> Monitor the traffic volume in each geo-targeted group to ensure a sufficient sample size for statistical significance.</li>
 
@@ -93,9 +93,10 @@
 	 <h2> Split a target audience into multiple A/B test groups </h2>
 	 <ul>
   <li>Identify the Target Audience: Determine who your target audience is for the A/B test, such as specific user segments or demographics.</li>
-  <li>Segmentation Criteria: Define the criteria for segmenting the audience, which could include factors like location, age, gender, behavior, or any relevant attributes.</li>
+  <li>Segmentation Criteria: Define the criteria for segmenting the audience, which could include factors like device type, access and interest</li>
   <li>Random Sampling: Use a random sampling method to assign individuals from the target audience to different groups. This ensures that each group is representative of the overall audience.</li>
-  <li>Group Size and Ratio: Decide on the size of each group and the ratio in which you want to split the audience. Common ratios include 50/50 (equal split) or other variations based on your testing goals.</li>
+  <li>Group Size and Ratio: Decide on the size of each group and the ratio in which you want to split the audience. Common ratios such as
+  50/50 (equal split) can be debated for lost opportunities. The split is a function of length of time, budget etc to see necessary effect</li>
   <li>Assigning Unique Identifiers: Assign a unique identifier or cookie to each user in a group to ensure they consistently see the same version of the test content during their visits.</li>
   <li>Implement A/B Test: Create and implement the A/B test variations for each group, making sure that the content or changes you want to test are applied accurately.</li>
   <li>Data Collection: Gather data on user interactions and behaviors for each group, tracking relevant metrics like conversion rates, click-through rates, or other key performance indicators (KPIs).</li>
@@ -106,7 +107,7 @@
 </ul>
  <p> These steps allow you to effectively split your target audience into multiple A/B test groups and assess the impact of different variations on user behavior and outcomes. </p>
  
-  <h2>Statistical Tests of Significane</h2>
+  <h2>Statistical Tests of Significance</h2>
  
     
     <ul>
