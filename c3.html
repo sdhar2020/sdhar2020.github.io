@@ -86,7 +86,7 @@
 							</p>
 							<p> The goal is to build a machine learning classification model that can predict probability of churn in current customers based on behavior of attrition in the past. Meaning Probability of 'No future interaction' </p>
 							
-							<h3> Exploratory Analysis </h3>
+							<h2> Exploratory Analysis </h2>
 							
 								<object data="images/c3/hist.svg" type="image/svg+xml" width="900" height="600">
 								</object>
@@ -104,23 +104,71 @@
 							</p>
 							<object data="images/c3/roc.svg" type="image/svg+xml" width="900" height="600">
 								</object>
-							<h3> Feature Engineering </h3>
-							<p> A total of ~85 features have been used in this exercise. The important classes are as follows:
+							<p>
+							The following are the classification metrics:
+							</p>
+							<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>scorer</th>
+      <th>train_f1_score</th>
+      <th>train_auc_score</th>
+      <th>train_precision</th>
+      <th>train_recall</th>
+      <th>test_f1_score</th>
+      <th>test_auc_score</th>
+      <th>test_precision</th>
+      <th>test_recall</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Logistic Regression</td>
+      <td>0.729809</td>
+      <td>0.724550</td>
+      <td>0.716133</td>
+      <td>0.74405</td>
+      <td>0.203343</td>
+      <td>0.800579</td>
+      <td>0.118699</td>
+      <td>0.118699</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Random Forest</td>
+      <td>0.990381</td>
+      <td>0.990283</td>
+      <td>0.980957</td>
+      <td>1.00000</td>
+      <td>0.556150</td>
+      <td>0.875905</td>
+      <td>0.619048</td>
+      <td>0.619048</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>XGBoost</td>
+      <td>0.985542</td>
+      <td>0.985325</td>
+      <td>0.971506</td>
+      <td>1.00000</td>
+      <td>0.553191</td>
+      <td>0.882587</td>
+      <td>0.492424</td>
+      <td>0.492424</td>
+    </tr>
+  </tbody>
+</table>
+							
+							<p> The recall rate is key as this determines ability to target with retention engagement. The model to be used is determined by factors such as budget. In this case the Random Forest model ought to be used
 							</p>
 							
-							<ol start="1">
-							<li> Base multivariate features: <code> 'temperature', 'var1', 'pressure', 'windspeed' </code> </li>
-							<li> Time related features such as: <code> 'Year', 'Month', 'Week', 'WeekDay', 'Hour' </code>  </li>
-							<li> Trigonometric features such as to capcture cyclicity: <code> 'hour_sin', 'hour_cos', 'WeekDay_sin', 'WeekDay_cos', 'Month_sin' </code>  as in the upper graph below</li>
-							<li> Spline features: Example <code> 'hr_spline_0', 'hr_spline_1', 'hr_spline_2', 'hr_spline_3' </code>  etc as shown in the lower graph below</li>
-							<li> New binary features such as <code> 'Holiday', 'Weekend' </code> </li>
-							<li> One hot encoded variables <code> 'var2_B', 'var2_C' </code> </li>
-							<li> 50 oddd interaction variables between Hourly spline variables and categorical and binary variables to capture spikes and throughs as the case may be due to interactions </li>
-							
-							</ol>
-							<span class="image main"><img src="images/c2/7.Periodicfeatures.svg" alt="" /></span>
+							<object data="images/c3/cfm.svg" type="image/svg+xml" width="900" height="600">
+								</object>
 							<p> </p>
-							<h3> Training and Prediction </h3>
+							<h2> Recall Rate </h2>
 							<p> There were two sets of model developed one looking at long term data and the other looking at short term performance. Both models use <code> RidgeCV </code> to optimize the <code> Mean Absolute Error </code> in a K= 5 cross validating frame work for each of the 48 time segments.
 							</p>
 							<h4> Long Term Window </h4>
