@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Customer Churn</title>
+		<title>A/B Testing</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -50,26 +50,47 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Customer Churn Prediction</h1>
+							<h1>Setting Up A/B Test</h1>
 							
-							<h2> Customer Churn</h2>
+							<h2> A/B Test</h2>
 							<p>
-							As of September 2021, a rough estimate for CAC could range from $50 to $300 or more per customer (personal communications, Chat GPT August 2023). A general guideline for a good attrition rate for subscription-based online businesses was typically around 5% per month. However, it's essential to note that what constitutes a "good" attrition rate can differ significantly between industries, business model, engagement activities, competitive actions, pricing, value propositiona and service quality. Predicting and reducing customer churn or attrition is a interesting challenge.
-							
-							Considerations around causality related Issues in predicting customer churn is key. Some of them are as follows:
+							A/B testing, is a controlled experiment in which two or more variants (A and B) of a webpage, app, or marketing element are compared to determine which one performs better in terms of a specific goal or metric, such as click-through rates, conversion rates, or user engagement. It helps businesses make data-driven decisions by assessing the impact of changes or variations on user behavior and outcomes.
 							</p>
-							 <ul>
-								<li>Correlation vs. Causation: Distinguishing between correlated factors and actual causes of churn.</li>
-								<li>Confounding Variables: Identifying and accounting for variables that may distort causal relationships.</li>
-								<li>Time Lag: Dealing with time delays between causes and the manifestation of churn.</li>
-								<li>Reverse Causality: Recognizing situations where churn itself influences the identified causes.</li>
-								<li>Hidden Causes: Discovering latent or unobservable factors contributing to churn.</li>
-								<li>Feedback Loops: Handling situations where churn and its causes create feedback loops.</li>
-								<li>Interventions: Understanding how interventions to reduce churn may impact causal relationships.</li>
-								<li>Data Quality: Ensuring that data used to establish causal links is accurate and comprehensive.</li>
-    </ul>
-							<p> At a aggregate level churn/ attrition % is a end of period fact. Customer churn rate is the percentage of customers who have gone from active to inactive during the analysis period. The denominator for the churn rate is the number of active customers at the beginning of the period, and the numerator is churn.</p>
-							<p> A predictive model establishes causality between seemingly disparate events e.g. low balance in wallet, app errors while loading moneies during the obersation period to the probability that a customer may never return due to degraded experience. A predictive model trained on historical data of casauation  predicts probability of churn in prediction period. Assuming causation isn't broken a churn model can be valuable asset to design interventions to improve retention</p>
+							<h2> Operational Controls for A/B Test Requiring Physical Fulfillment</h2>
+							  <p>Effectively conducting A/B tests on geo-targeted campaigns that involve physical fulfillment, such as product deliveries, requires careful planning and operational controls to ensure accurate and meaningful results. Here are key operational controls to consider:</p>
+
+    <ol>
+        <li><strong>Data Segmentation:</strong> Ensure that you have clean and well-segmented data based on geographic regions and device types.</li>
+
+        <li><strong>Random Sampling:</strong> Implement random sampling to select participants for each variant within the defined geographic regions and device types.</li>
+
+        <li><strong>Geo-Targeting Accuracy:</strong> Verify the accuracy of your geo-targeting to ensure that users are correctly assigned to their respective regions.</li>
+
+        <li><strong>Device Detection:</strong> Implement reliable device detection to accurately categorize users based on the type of device they are using.</li>
+
+        <li><strong>Consistency in Testing Environment:</strong> Ensure that the testing environment is consistent across different geographic regions and device types.</li>
+
+        <li><strong>Time Zone Considerations:</strong> Be aware of time zone differences when analyzing the results of geo-targeted campaigns.</li>
+
+        <li><strong>Traffic Volume Monitoring:</strong> Monitor the traffic volume in each geo-targeted group to ensure a sufficient sample size for statistical significance.</li>
+
+        <li><strong>Statistical Significance Threshold:</strong> Set a predefined threshold for statistical significance before starting the A/B test.</li>
+
+        <li><strong>Control Group:</strong> Include a control group that receives no campaign or the existing campaign to compare against the variants.</li>
+
+        <li><strong>Data Privacy Compliance:</strong> Ensure that your testing complies with data privacy regulations.</li>
+
+        <li><strong>Monitoring and Alerting:</strong> Implement real-time monitoring and alerting systems to detect anomalies or issues during the A/B test.</li>
+
+        <li><strong>Documentation:</strong> Maintain detailed documentation of the A/B test setup, including the targeted regions, device types, sample sizes, statistical methods, and timeline.</li>
+
+        <li><strong>Post-Test Analysis:</strong> Conduct a thorough post-test analysis, including statistical analysis and interpretation of results.</li>
+
+        <li><strong>Feedback Loop:</strong> Establish a feedback loop to communicate results and insights with relevant teams and optimize future campaigns.</li>
+    </ol>
+
+    <p>By implementing these operational controls, you can ensure that your A/B tests on geo-targeted campaigns with physical fulfillment are conducted accurately and ethically, leading to meaningful results and data-driven decisions.</p>
+
 							
 							<div>
 								<object data="images/c3/churn.svg" type="image/svg+xml" width="900" height="600">
