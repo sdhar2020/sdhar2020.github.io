@@ -79,36 +79,24 @@
 							
 							<h2> Introducing the problem</h2>
 							
-							<p> The problem at hand is from the Fintech industry and that of a payments app that is used for paying in a ring fenced group of vending equipments. While finger printing the consumers is easy it is often hard to understand what leads to early adopter disengagement. Thanks to the subject nature of the problem there is a plethora of streaming data that can be captured in big data such as (but not limited to) app related issues, waller charging related issues, balance in wallet, first transaction time frame, open marketing offers etc.
+							<p> The problem at hand is from the Fintech industry and that of a payments app that is used for paying in a hyperlocal market. While finger printing the consumers is easy it is often hard to understand what leads to early adopter disengagement. Thanks to the subject nature of the problem there is a plethora of streaming data that can be captured in big data system such as (but not limited to) app related issues, wallet charging related issues, balance in wallet, first transaction time frame, open marketing offers etc.
 							</p>
 							
-							<p> Overall, this problem looking at history of consumer experiences and then behavior and building prediction to predict in the future. Therefore, if low wallet balance in the past has lead to zero transaction in more recent times, the model generalizes that current low balances increasesw the probability in the future.
+							<p> Overall, this problem looking at history of consumer experiences and then behavior and building prediction to predict in the future. Therefore, if low wallet balance in the past has lead to zero transaction in more recent times, the model generalizes that current low balances increasesw the probability in the future. Since the market is hyperlocal consumer profiles such as age, gender, purchase profiles are not great predictor of variability
 							</p>
 							<p> The goal is to build a machine learning classification model that can predict probability of churn in current customers based on behavior of attrition in the past. Meaning Probability of 'No future interaction' </p>
 							
 							<h3> Exploratory Analysis </h3>
-							<span class="image main"><img src="images/c2/3.Hist.svg" alt="" /></span>
-							<ol start="1">
-							<li>The histogram shows the consumption metric renderd by a categorical variable var2 with values A,B and C. It's data dictionary didn't sate what this is and it looks like values B,C are sparse meaning without some kind of sampling approach it is unlikely we shall see much stand alone impact in the prediction algorithm </li>
-							<li>This bar graph shows the distribution of consumption across each day of the week, rendered by non working days. 5, 6 being Saturday and Sunday. It appears holidays in weekdays leads to higher consumption. A mental note to create a feature for holidays.</li>
-							<li>The heatmap shows weekends late in the night shows increased consumption and week days after midday shows lower load. This appears counter intuitive but each use case has it's own nicetities that we need to build on. 4 years of history provides us history to geenralize on</li>
-							</ol>
-							<span class="image main"><img src="images/c2/4.Scater.svg" alt="" /></span>
-							<ol start="4">
-							<li> This scatter plot rendered by season shows that the variable var1 has little or no relationship/ causality with consumption</li>
-							<li> This scatter plot looks samiliar to the first one. Giving reasons to think var1 and temperature are collinear. 
-							</li>
-							<li> The windspeed has a inverse relationship with consumption. This is a non linear relationship and gives us opprotunities to model differently
-							</ol>
-							<span class="image main"><img src="images/c2/5.Regplot.svg" alt="" /></span>
-							<ol start="7">
-							<li> pressure and consumption shows little relationship wth each other</li>
-							<li> Temperature shows linear decreasing relationship wth each other. Ditto for var1
-							</li>
-							</ol>
-							<span class="image main"><img src="images/c2/6.timeagg.svg" alt="" /></span>
-							<p> The monthly, quarterly means don't show any significant trend however towards the end the consumption pattern shows more variations around the long term mean. The standard deviation although range bound shows variation as a result some heteroscadasticity
-							</p>
+							<div>
+								<object data="images/c3/hist.svg" type="image/svg+xml" width="900" height="600">
+								</object>
+							</div>
+							
+							<div>
+								<object data="images/c3/bivar.svg" type="image/svg+xml" width="900" height="600">
+								</object>
+							</div>
+						
 							<h2> Model Development </h2>
 							<p>
 							Instead of pruning the variables at the get go, time segment wise regularized Ridge Regression models were developed in as a training harness as sci-kit learn <code> make_pipeline() </code>. As new time segments may get added the deployed model shall develop a new model and score the most recent time segment based on history.
