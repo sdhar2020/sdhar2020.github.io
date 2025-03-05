@@ -50,12 +50,20 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Coming Soon</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1>Optimizing Vending Machine Placement: An Overview</h1>
+							
+							<p>Vending machine placement optimization is part of a broader class of facility location problems, which aim to identify the best locations for facilities (e.g., machines, stores, or warehouses) within a given space. These problems are crucial for enhancing operational efficiency, reducing costs, and improving user experience. In this specific problem, the objective is to strategically place vending machines across multiple locations to maximize sales and minimize operational challenges, such as underutilization or high maintenance costs.</p>
+							
+							<h2>Understanding the Problem Through Optimization</h2>
+							<p>In this problem, multiple optimization scenarios are explored to improve the placement of vending machines across various locations. The process starts with analyzing sales data to identify underperforming machines. Using K-means clustering, vending machines are grouped based on their sales performance, helping identify high- and low-performing locations. Underperforming machines are then moved to high-performing locations to boost overall sales.</p>
+							<p>The second phase of optimization incorporates moving costs and location constraints. For instance, each location has a capacity limit for the number of machines it can accommodate. A cost matrix is used to calculate the expenses associated with moving machines from one location to another. Linear sum assignment is then employed to find the optimal machine reassignment plan, ensuring that moves are cost-efficient and within location limits.</p>
+							<h2>Visualization of Optimization Results</h2>
+							<span class="image main"><img src="images/c5/sales_before_after_optimization.png" alt="" /></span>
+							<p>Sales Before & After Optimization (Bar Chart): This chart shows the sales across locations, comparing the status quo with the results from both optimization scenarios. It highlights the changes in sales and the improvements achieved after the machine reassignments.</p>
+							<span class="image main"><img src="images/c5/machine_density_heatmap.png" alt="" /></span>
+							<p>Machine Density Heatmap: This heatmap visualizes the distribution of vending machines across locations and scenarios, providing insights into how the machine placement changes after optimization.</p>
+							<span class="image main"><img src="images/c5/machine_reassignments.png" alt="" /></span>
+							<p>Machine Reassignments (Network Diagram): This diagram illustrates the specific moves of vending machines from underperforming locations to high-performing ones. The edges represent the moves, providing a clear view of the reassignments.</p>
 						</div>
 					</div>
 
