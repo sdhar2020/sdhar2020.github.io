@@ -62,7 +62,17 @@
 							<p>Imbalanced hierarchical multiclass classification is common in medical diagnosis, where diseases are categorized into broad groups (e.g., respiratory vs. cardiovascular) and further subdivided into specific conditions, with rare diseases being underrepresented, leading to biased model predictions. Another example is species classification in ecology, where organisms are classified into kingdoms, families, and species, but rare or endangered species have significantly fewer samples, making accurate identification challenging yet crucial for conservation efforts.</p>
 							<h2> Simple feature extraction</h2>
 							<span class="image main"><img src="images/c9/c93.png" alt="" /></span>
-							
+							<p>
+							Just from the measurements via <code>cv2</code> the following intuition can be drawn:</p>
+
+    <ul>
+        <li>Ipsala is the longest, followed by Basmati.</li>
+        <li>Jasmine and Arborio have almost similar length.</li>
+        <li>Karacadag has the shortest length.</li>
+        <li>Max width shows a similar impression, although less separation is observed compared to the Max Length.</li>
+        <li>In case of Category, the spread of common and rare is quite significant, while uncommon appears skinnier.</li>
+    </ul>
+							</p>
 							<span class="image main"><img src="images/c9/c95.png" alt="" /></span>
 							<span class="image main"><img src="images/c9/c96.png" alt="" /></span>
 							<span class="image main"><img src="images/c9/c97.png" alt="" /></span>
