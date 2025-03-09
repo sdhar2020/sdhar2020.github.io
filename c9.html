@@ -74,7 +74,7 @@
     </ul>
 							</p>
 							<h2> Convolutional Neural Network (CNN) Model</h2>
-							<p> A CNN was trained in Google Colab T4 GPU in little over 23 minutes with early stopping for 11 epochs with a batch size = 32 and learning rate= 0.001 using the ADAM optimizer. The following is typical result </p>
+							<p> A CNN was trained in Google Colab T4 GPU in little over 23 minutes with early stopping for 11 epochs with a batch size = 32 and learning rate= 0.001 using the ADAM optimizer. The following is typical result: </p>
 							<table>
         <tr>
             <th></th>
@@ -107,10 +107,14 @@
             <td>0.98704</td>
         </tr>
     </table>
+							<h2> Training Epochs </h2>
+							<p> The training cycle run with a early stopping criteria of sopping if the validation loss didn't improve over 5 cycles. The choppiness of the validation data is perhaps due to the random nature of how the validation data may have been sampled in the training cycle. But training stops usually at ~14 epochs</p>
 							<span class="image main"><img src="images/c9/c95.png" alt="" /></span>
+							<h2> Results of Multiclass Classification</h2>
 							<span class="image main"><img src="images/c9/c96.png" alt="" /></span>
+							<p>The above heatmap shows the hierarchical classification confusion matrix. Much of Rice Types x Categories are classifided correctly and are shown in red</p>
 							<span class="image main"><img src="images/c9/c97.png" alt="" /></span>
-							<p>Testing</p>
+							<p>Another way of displaying same results is in the form of a sankey disgram. The left side is as determined by the data in the test sample as in ACTUAL and the righ side is the PREDICTED labels. The small width pathways are misclassifications</p>
 							
 						</div>
 					</div>
