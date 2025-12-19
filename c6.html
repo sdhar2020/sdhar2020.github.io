@@ -56,9 +56,21 @@
 							<h2> Sensor Data</h2>
 							<span class="image main"><img src="images/c6/c61.png" alt="" /></span>
 							<p>As an example, the NASA CMAPSS dataset consists of multivariate time-series sensor data collected from simulated turbofan engines operating under varying conditions. It includes operational settings and multiple physical sensor measurements (e.g., temperatures, pressures, and rotational speeds) recorded across engine life cycles from initial operation through degradation and failure</p>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h2> Remaining Useful Life </h2>
+							<span class="image main"><img src="images/c6/c62.png" alt="" /></span>
+							<p>Remaining Useful Life (RUL) estimates how long an asset can operate before failure based on degradation patterns in sensor data. The curves show a slow early-life phase followed by a sharp rise in failures as assets approach end of life, with RUL ≈ 100 marking a key transition where degradation accelerates and failure risk increases. This insight helps define the optimal window for proactive, data-driven maintenance decisions.</p>
+							<h2> Initial Models to predict RUL</h2>
+							<span class="image main"><img src="images/c6/c64.png" alt="" /></span>
+							<p>To start, this study compares time-series models for Remaining Useful Life prediction, including LSTMs, bidirectional LSTMs, CNN-LSTMs, and Transformers. Simple recurrent and CNN-LSTM models perform best, capturing local temporal patterns and gradual degradation. Transformers and bidirectional models underperform due to limited sequence length, smooth degradation, and lack of informative future context. Overall, model complexity alone does not ensure better accuracy; alignment with the underlying degradation process is key.</p>
+							<h2> Finalizing Model</h2>
+							<span class="image main"><img src="images/c6/c66.png" alt="" /></span>
+							<p>This LSTM architecture suits Remaining Useful Life prediction by matching the sequential, gradual degradation in sensor data. Stacked layers capture both short- and long-term trends, while dropout limits overfitting without adding complexity. Optional attention and dense layers highlight key time steps, enhancing signal extraction with minimal extra parameters. With few trainable parameters, the model generalizes well across assets and conditions, even with limited data. Overall, this low-complexity design offers strong performance, stability, and interpretability, making it practical for real-world prognostics.</p>
+							<span class="image main"><img src="images/c6/c65.png" alt="" /></span>
+							<h2> Final Model Results </h2>
+							<span class="image main"><img src="images/c6/c67.png" alt="" /></span>
+							<p>The LSTM model shows stable and consistent convergence, with both training and validation loss decreasing smoothly over epochs. The close alignment between training and validation curves indicates strong generalization and minimal overfitting. Mean Absolute Error steadily declines and stabilizes at a low level, demonstrating reliable predictive accuracy. The predicted versus actual plot shows a strong linear relationship, with most points closely following the 45-degree reference line. This indicates the model captures the underlying temporal patterns effectively across the target range. The stacked LSTM architecture with dropout provides sufficient capacity without unnecessary complexity. Overall, the results suggest the model is robust, well-regularized, and suitable for production use.</p>
+							
+</p>
 						</div>
 					</div>
 
