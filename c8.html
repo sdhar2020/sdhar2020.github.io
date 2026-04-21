@@ -6,9 +6,10 @@
 -->
 <html>
 	<head>
-		<title>Feature Based Pricing & Costing</title>
+		<title>Price & Cost Prediction | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Feature-based price and cost prediction using machine learning — Random Forest, Gradient Boosted Trees, and LLM-powered RAG for market data retrieval. Data-Intuition.AI case study." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -22,7 +23,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">DATA-INTUITION.AI</span>
+									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Data-Intuition.AI</span>
 								</a>
 
 							<!-- Nav -->
@@ -40,8 +41,11 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="About Us.html">About</a></li>
-							<li><a href="Partners.html">Partner Certification</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="methodology.html">Methodology</a></li>
+							<li><a href="https://www.credly.com/users/sumit-dhar-ai-ml-datascience" target="_blank">Certifications</a></li>
+							<li><a href="insights.html">Insights</a></li>
 							<li><a href="generic.html">Contact</a></li>
 						</ul>
 					</nav>
@@ -52,39 +56,93 @@
 							<h1>Feature Based Price & Cost Prediction</h1>
 							
 							<p>Feature-Based Price & Cost Prediction is a data-driven approach that uses machine learning and statistical models to estimate the price or cost of a product or service based on its characteristics (features). These features can include material costs, production time, brand, demand, market trends, and historical pricing data.</p>
-							<h2>LLMs with RAG search for Market Data </h2>
-							<p>To create data for feature-based price and cost prediction, gather structured and unstructured data from sources like sales records, supplier costs, competitor pricing, and market trends. Use web scraping, APIs, and surveys to enrich datasets. Clean, preprocess, and engineer features to enhance predictive accuracy. </p>
+
+							<h2>LLMs with RAG Search for Market Data</h2>
+							<p>To create data for feature-based price and cost prediction, gather structured and unstructured data from sources like sales records, supplier costs, competitor pricing, and market trends. Use web scraping, APIs, and surveys to enrich datasets. Clean, preprocess, and engineer features to enhance predictive accuracy.</p>
 							<p>LLMs can enhance price prediction by retrieving relevant market insights via Retrieval-Augmented Generation (RAG). They can search real-time data, extract key pricing trends, and analyze customer sentiment. Integrating LLMs with structured databases allows dynamic price forecasting by leveraging external and internal knowledge efficiently.</p>
-							<h2> Role of Machine Learning </h2>
+
+							<h2>Role of Machine Learning</h2>
 							<p>Machine learning identifies patterns in feature-based price and cost data, enabling accurate predictions. It automates pricing models, detects trends, and optimizes cost estimation. Techniques like regression, tree-based models, and neural networks refine predictions, improving decision-making and competitive pricing strategies.</p>
-							<h2> Multivariate Wage Data</h2>
-							<p>Here we are using simulated multivariate wage data for tutors created to show the use of machine learning. There are 9 covariates and the target variable is Hourly Wage Rate (USD)</p>
+
+							<h2>Multivariate Wage Data</h2>
+							<p>Here we are using simulated multivariate wage data for tutors created to show the use of machine learning. There are 9 covariates and the target variable is Hourly Wage Rate (USD).</p>
 							<span class="image main"><img src="images/c8/c81.png" alt="" /></span>
-							<h2> Machine Learning Modeling</h2>
-							<p> The target is a continuous variable. Tensorflow Random Forest & Gradient Boosted Trees were used to build the model. The data was divided into 70-20-10 train/ test/ validation set. The following are the results</p>
+
+							<h2>Machine Learning Modeling</h2>
+							<p>The target is a continuous variable. Tensorflow Random Forest & Gradient Boosted Trees were used to build the model. The data was divided into 70-20-10 train/test/validation set. The following are the results:</p>
 							<table border="1" class="dataframe">
-  <thead>
-    <tr>
-      <th>Model</th><th>Dataset</th><th>MAE</th><th>R2</th><th>Explained Variance</th><th>MSE</th><th>RMSE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="3">Random Forest</td><td>Train</td><td>1.246579</td><td>0.982348</td><td>0.982348</td><td>2.468450</td><td>1.571130</td></tr>
-<td>Validation</td><td>3.418445</td><td>0.868955</td><td>0.868957</td><td>19.131375</td><td>4.373943</td></tr>
-<td>Test</td><td>3.297460</td><td>0.874221</td><td>0.874558</td><td>16.826888</td><td>4.102059</td></tr>
-    <tr>
-      <td rowspan="3">Gradient Boosted Trees</td><td>Train</td><td>1.002240</td><td>0.988137</td><td>0.988137</td><td>1.658833</td><td>1.287957</td></tr>
-<td>Validation</td><td>1.862371</td><td>0.961267</td><td>0.961272</td><td>5.654648</td><td>2.377950</td></tr>
-<td>Test</td><td>1.721145</td><td>0.966926</td><td>0.967453</td><td>4.424735</td><td>2.103506</td></tr>
-  </tbody>
-</table>
-							
-							<p> The following visualizations show visual comparison between the 2 methods of ML used and comparing between results and covariates used in the model </p>
+								<thead>
+									<tr>
+										<th>Model</th>
+										<th>Dataset</th>
+										<th>MAE</th>
+										<th>R2</th>
+										<th>Explained Variance</th>
+										<th>MSE</th>
+										<th>RMSE</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="3">Random Forest</td>
+										<td>Train</td>
+										<td>1.246579</td>
+										<td>0.982348</td>
+										<td>0.982348</td>
+										<td>2.468450</td>
+										<td>1.571130</td>
+									</tr>
+									<tr>
+										<td>Validation</td>
+										<td>3.418445</td>
+										<td>0.868955</td>
+										<td>0.868957</td>
+										<td>19.131375</td>
+										<td>4.373943</td>
+									</tr>
+									<tr>
+										<td>Test</td>
+										<td>3.297460</td>
+										<td>0.874221</td>
+										<td>0.874558</td>
+										<td>16.826888</td>
+										<td>4.102059</td>
+									</tr>
+									<tr>
+										<td rowspan="3">Gradient Boosted Trees</td>
+										<td>Train</td>
+										<td>1.002240</td>
+										<td>0.988137</td>
+										<td>0.988137</td>
+										<td>1.658833</td>
+										<td>1.287957</td>
+									</tr>
+									<tr>
+										<td>Validation</td>
+										<td>1.862371</td>
+										<td>0.961267</td>
+										<td>0.961272</td>
+										<td>5.654648</td>
+										<td>2.377950</td>
+									</tr>
+									<tr>
+										<td>Test</td>
+										<td>1.721145</td>
+										<td>0.966926</td>
+										<td>0.967453</td>
+										<td>4.424735</td>
+										<td>2.103506</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p>The following visualizations show visual comparison between the 2 methods of ML used and comparing between results and covariates used in the model.</p>
 							<span class="image main"><img src="images/c8/c82.png" alt="" /></span>
-							<h2> Explaining AI</h2>
+
+							<h2>Explaining AI</h2>
 							<span class="image main"><img src="images/c8/c83.png" alt="" /></span>
-							<p>A machine learning model learns from the training data, learns weights and such from the data. The final prediction is a reflection of the data that was used to train. The above shows the 5 worst predictions in the test data and how it compares to similar cohort in the training set.It shows something interesting- the predicted values are close to the mean value when compared with the actual wage value in the test data set </p>
+							<p>A machine learning model learns from the training data, learns weights and such from the data. The final prediction is a reflection of the data that was used to train. The above shows the 5 worst predictions in the test data and how it compares to similar cohort in the training set. It shows something interesting — the predicted values are close to the mean value when compared with the actual wage value in the test data set.</p>
+
 						</div>
 					</div>
 
@@ -93,7 +151,7 @@
 						<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
-								<form method="post" action="#">
+								<form method="post" action="https://formspree.io/f/myyveqgb">
 									<div class="fields">
 										<div class="field half">
 											<input type="text" name="name" id="name" placeholder="Name" />
@@ -113,14 +171,11 @@
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://twitter.com/sxd213" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.linkedin.com/in/sumitdhar71/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/sdhar2020/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="tel:4154759882" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="mailto:sdhar@data-intuition.ai" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
