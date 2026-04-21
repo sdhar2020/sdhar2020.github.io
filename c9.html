@@ -6,9 +6,10 @@
 -->
 <html>
 	<head>
-		<title>Computer Vision & Deep Learning</title>
+		<title>Computer Vision & Deep Learning | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Computer Vision and Deep Learning case study — hierarchical image classification using CNNs, covering rice type classification, feature extraction, and multiclass imbalanced datasets. Data-Intuition.AI." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -22,7 +23,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">DATA-INTUITION.AI</span>
+									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Data-Intuition.AI</span>
 								</a>
 
 							<!-- Nav -->
@@ -40,8 +41,11 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="About Us.html">About</a></li>
-							<li><a href="Partners.html">Partner Certification</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="methodology.html">Methodology</a></li>
+							<li><a href="https://www.credly.com/users/sumit-dhar-ai-ml-datascience" target="_blank">Certifications</a></li>
+							<li><a href="insights.html">Insights</a></li>
 							<li><a href="generic.html">Contact</a></li>
 						</ul>
 					</nav>
@@ -57,63 +61,61 @@
 							<span class="image main"><img src="images/c9/c91.png" alt="" /></span>
 							<h2> Hierarchical Classification </h2>
 							<span class="image main"><img src="images/c9/c92.png" alt="" /></span>
-							<p>In this case the Rice Type is balanced multiclass while the Rice Category is a imbalanced multiclass.Hierarchical classification of multiclass imbalanced datasets poses challenges such as error propagation across hierarchy levels and biased predictions due to underrepresented classes, making it difficult to achieve consistent performance across all categories. However, it also offers opportunities to leverage hierarchical relationships for improved generalization, enabling better class differentiation and the use of structured loss functions to mitigate imbalance effects. </p>
+							<p>In this case the Rice Type is balanced multiclass while the Rice Category is a imbalanced multiclass. Hierarchical classification of multiclass imbalanced datasets poses challenges such as error propagation across hierarchy levels and biased predictions due to underrepresented classes, making it difficult to achieve consistent performance across all categories. However, it also offers opportunities to leverage hierarchical relationships for improved generalization, enabling better class differentiation and the use of structured loss functions to mitigate imbalance effects. </p>
 							<p>Imbalanced hierarchical multiclass classification is common in medical diagnosis, where diseases are categorized into broad groups (e.g., respiratory vs. cardiovascular) and further subdivided into specific conditions, with rare diseases being underrepresented, leading to biased model predictions. Another example is species classification in ecology, where organisms are classified into kingdoms, families, and species, but rare or endangered species have significantly fewer samples, making accurate identification challenging yet crucial for conservation efforts.</p>
-							<h2> Simple feature extraction</h2>
+							<h2> Simple Feature Extraction</h2>
 							<span class="image main"><img src="images/c9/c93.png" alt="" /></span>
 							<p>
 							Just from the measurements via <code>cv2</code> the following intuition can be drawn:</p>
-
-    <ul>
-        <li>Ipsala is the longest, followed by Basmati.</li>
-        <li>Jasmine and Arborio have almost similar length.</li>
-        <li>Karacadag has the shortest length.</li>
-        <li>Max width shows a similar impression, although less separation is observed compared to the Max Length.</li>
-        <li>In case of Category, the spread of common and rare is quite significant, while uncommon appears skinnier.</li>
-    </ul>
-							</p>
+							<ul>
+								<li>Ipsala is the longest, followed by Basmati.</li>
+								<li>Jasmine and Arborio have almost similar length.</li>
+								<li>Karacadag has the shortest length.</li>
+								<li>Max width shows a similar impression, although less separation is observed compared to the Max Length.</li>
+								<li>In case of Category, the spread of common and rare is quite significant, while uncommon appears skinnier.</li>
+							</ul>
 							<h2> Convolutional Neural Network (CNN) Model</h2>
 							<p> A CNN was trained in Google Colab T4 GPU in little over 23 minutes with early stopping for 11 epochs with a batch size = 32 and learning rate= 0.001 using the ADAM optimizer. The following is typical result: </p>
 							<table>
-        <tr>
-            <th></th>
-            <th>Type</th>
-            <th>Category</th>
-            <th>Hierarchical</th>
-        </tr>
-        <tr>
-            <td>Precision</td>
-            <td>0.98423</td>
-            <td>0.990597</td>
-            <td>0.981956</td>
-        </tr>
-        <tr>
-            <td>Recall</td>
-            <td>0.984178</td>
-            <td>0.990815</td>
-            <td>0.981956</td>
-        </tr>
-        <tr>
-            <td>F1 Score</td>
-            <td>0.984183</td>
-            <td>0.990706</td>
-            <td>0.992178</td>
-        </tr>
-        <tr>
-            <td>Accuracy</td>
-            <td>0.984178</td>
-            <td>0.992178</td>
-            <td>0.98704</td>
-        </tr>
-    </table>
+								<tr>
+									<th></th>
+									<th>Type</th>
+									<th>Category</th>
+									<th>Hierarchical</th>
+								</tr>
+								<tr>
+									<td>Precision</td>
+									<td>0.98423</td>
+									<td>0.990597</td>
+									<td>0.981956</td>
+								</tr>
+								<tr>
+									<td>Recall</td>
+									<td>0.984178</td>
+									<td>0.990815</td>
+									<td>0.981956</td>
+								</tr>
+								<tr>
+									<td>F1 Score</td>
+									<td>0.984183</td>
+									<td>0.990706</td>
+									<td>0.992178</td>
+								</tr>
+								<tr>
+									<td>Accuracy</td>
+									<td>0.984178</td>
+									<td>0.992178</td>
+									<td>0.98704</td>
+								</tr>
+							</table>
 							<h2> Training Epochs </h2>
-							<p> The training cycle run with a early stopping criteria of sopping if the validation loss didn't improve over 5 cycles. The choppiness of the validation data is perhaps due to the random nature of how the validation data may have been sampled in the training cycle. But training stops usually at ~14 epochs</p>
+							<p> The training cycle run with a early stopping criteria of stopping if the validation loss didn't improve over 5 cycles. The choppiness of the validation data is perhaps due to the random nature of how the validation data may have been sampled in the training cycle. But training stops usually at ~14 epochs.</p>
 							<span class="image main"><img src="images/c9/c95.png" alt="" /></span>
 							<h2> Results of Multiclass Classification</h2>
 							<span class="image main"><img src="images/c9/c96.png" alt="" /></span>
-							<p>The above heatmap shows the hierarchical classification confusion matrix. Much of Rice Types x Categories are classifided correctly and are shown in red</p>
+							<p>The above heatmap shows the hierarchical classification confusion matrix. Much of Rice Types x Categories are classified correctly and are shown in red.</p>
 							<span class="image main"><img src="images/c9/c97.png" alt="" /></span>
-							<p>Another way of displaying same results is in the form of a sankey disgram. The left side is as determined by the data in the test sample as in ACTUAL and the righ side is the PREDICTED labels. The small width pathways are misclassifications</p>
+							<p>Another way of displaying same results is in the form of a Sankey diagram. The left side is as determined by the data in the test sample as in ACTUAL and the right side is the PREDICTED labels. The small width pathways are misclassifications.</p>
 							
 						</div>
 					</div>
@@ -123,7 +125,7 @@
 						<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
-								<form method="post" action="#">
+								<form method="post" action="https://formspree.io/f/myyveqgb">
 									<div class="fields">
 										<div class="field half">
 											<input type="text" name="name" id="name" placeholder="Name" />
@@ -143,14 +145,11 @@
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://twitter.com/sxd213" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.linkedin.com/in/sumitdhar71/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/sdhar2020/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="tel:4154759882" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="mailto:sdhar@data-intuition.ai" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
