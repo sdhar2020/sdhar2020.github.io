@@ -6,9 +6,10 @@
 -->
 <html>
 	<head>
-		<title>A/B Testing</title>
+		<title>Operationalize A/B Testing | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="A/B testing framework for geo-targeted campaigns with physical fulfillment — statistical significance testing, audience splitting, and Welch's T-Test analysis. Data-Intuition.AI case study." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -22,7 +23,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">DATA-INTUITION.AI</span>
+									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Data-Intuition.AI</span>
 								</a>
 
 							<!-- Nav -->
@@ -40,8 +41,11 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="About Us.html">About</a></li>
-							<li><a href="Partners.html">Partner Certification</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="methodology.html">Methodology</a></li>
+							<li><a href="https://www.credly.com/users/sumit-dhar-ai-ml-datascience" target="_blank">Certifications</a></li>
+							<li><a href="insights.html">Insights</a></li>
 							<li><a href="generic.html">Contact</a></li>
 						</ul>
 					</nav>
@@ -49,120 +53,100 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Setting Up A/B Test</h1>
-							
-							<h2> A/B Test</h2>
-							<p>
-							A/B testing in practice, is a controlled experiment in which two or more variants (A and B) of a webpage, app, or marketing element are compared to determine which one performs better in terms of a specific goal or metric, such as click-through rates, conversion rates, or user engagement. It helps businesses make data-driven decisions by assessing the impact of changes or variations on user behavior and outcomes.
-							</p>
-							<h2> Operational Controls for A/B Test Requiring Physical Fulfillment</h2>
-							  <p>Effectively conducting A/B tests on geo-targeted campaigns that involve physical fulfillment, such as product deliveries, requires careful planning and operational controls to ensure accurate and meaningful results. Here are key operational controls to consider:</p>
+							<h1>Setting Up A/B Testing</h1>
 
-    <ol>
-        <li><strong>Data Segmentation:</strong> Ensure that you have clean and well-segmented data based on geographic regions and device types.</li>
+							<h2>A/B Test</h2>
+							<p>A/B testing in practice is a controlled experiment in which two or more variants (A and B) of a webpage, app, or marketing element are compared to determine which one performs better in terms of a specific goal or metric, such as click-through rates, conversion rates, or user engagement. It helps businesses make data-driven decisions by assessing the impact of changes or variations on user behavior and outcomes.</p>
 
-        <li><strong>Random Sampling:</strong> Implement stratefied random sampling to select participants for each variant within the defined geographic regions and device types.</li>
+							<h2>Operational Controls for A/B Tests Requiring Physical Fulfillment</h2>
+							<p>Effectively conducting A/B tests on geo-targeted campaigns that involve physical fulfillment, such as product deliveries, requires careful planning and operational controls to ensure accurate and meaningful results. Here are key operational controls to consider:</p>
+							<ol>
+								<li><strong>Data Segmentation:</strong> Ensure that you have clean and well-segmented data based on geographic regions and device types.</li>
+								<li><strong>Random Sampling:</strong> Implement stratified random sampling to select participants for each variant within the defined geographic regions and device types.</li>
+								<li><strong>Geo-Targeting Accuracy:</strong> Verify the accuracy of your geo-targeting to ensure that users are correctly assigned to their respective regions.</li>
+								<li><strong>Device Detection:</strong> Implement reliable device detection to accurately categorize users based on the type of device they are using.</li>
+								<li><strong>Consistency in Testing Environment:</strong> Ensure that the testing environment is consistent across different geographic regions and device types. Make operational adjustments as required.</li>
+								<li><strong>Time Zone Considerations:</strong> Be aware of time zone differences when analyzing the results of geo-targeted campaigns. Normalize to GMT.</li>
+								<li><strong>Traffic Volume Monitoring:</strong> Monitor the traffic volume in each geo-targeted group to ensure a sufficient sample size for statistical significance.</li>
+								<li><strong>Statistical Significance Threshold:</strong> Set a predefined threshold for statistical significance before starting the A/B test.</li>
+								<li><strong>Control Group:</strong> Include a control group that receives no campaign or the existing campaign to compare against the variants.</li>
+								<li><strong>Data Privacy Compliance:</strong> Ensure that your testing complies with data privacy regulations.</li>
+								<li><strong>Monitoring and Alerting:</strong> Implement real-time monitoring and alerting systems to detect anomalies or issues during the A/B test.</li>
+								<li><strong>Documentation:</strong> Maintain detailed documentation of the A/B test setup, including the targeted regions, device types, sample sizes, statistical methods, and timeline.</li>
+								<li><strong>Post-Test Analysis:</strong> Conduct a thorough post-test analysis, including statistical analysis and interpretation of results.</li>
+								<li><strong>Feedback Loop:</strong> Establish a feedback loop to communicate results and insights with relevant teams and optimize future campaigns.</li>
+							</ol>
+							<p>By implementing these operational controls, you can ensure that your A/B tests on geo-targeted campaigns with physical fulfillment are conducted accurately and ethically, leading to meaningful results and data-driven decisions.</p>
 
-        <li><strong>Geo-Targeting Accuracy:</strong> Verify the accuracy of your geo-targeting to ensure that users are correctly assigned to their respective regions.</li>
+							<h2>Split a Target Audience into Multiple A/B Test Groups</h2>
+							<ul>
+								<li>Identify the Target Audience: Determine who your target audience is for the A/B test, such as specific user segments or demographics.</li>
+								<li>Segmentation Criteria: Define the criteria for segmenting the audience, which could include factors like device type, access and interest.</li>
+								<li>Random Sampling: Use a random sampling method to assign individuals from the target audience to different groups. This ensures that each group is representative of the overall audience.</li>
+								<li>Group Size and Ratio: Decide on the size of each group and the ratio in which you want to split the audience. Common ratios such as 50/50 (equal split) can be debated for lost opportunities. The split is a function of length of time, budget etc to see necessary effect.</li>
+								<li>Assigning Unique Identifiers: Assign a unique identifier or cookie to each user in a group to ensure they consistently see the same version of the test content during their visits.</li>
+								<li>Implement A/B Test: Create and implement the A/B test variations for each group, making sure that the content or changes you want to test are applied accurately.</li>
+								<li>Data Collection: Gather data on user interactions and behaviors for each group, tracking relevant metrics like conversion rates, click-through rates, or other key performance indicators (KPIs).</li>
+								<li>Analysis: Analyze the collected data to compare the performance of different test variations within each group. Determine which variation yields the desired results.</li>
+								<li>Statistical Significance: Use statistical analysis, such as hypothesis testing (e.g., t-tests or chi-squared tests), to assess if the observed differences are statistically significant.</li>
+								<li>Draw Conclusions: Based on the analysis, draw conclusions about the effectiveness of each variation and decide whether to implement changes or optimizations based on the results.</li>
+								<li>Iterate: Depending on the outcomes, you may iterate and conduct further A/B tests to refine your strategies and continuously improve the user experience.</li>
+							</ul>
+							<p>These steps allow you to effectively split your target audience into multiple A/B test groups and assess the impact of different variations on user behavior and outcomes.</p>
 
-        <li><strong>Device Detection:</strong> Implement reliable device detection to accurately categorize users based on the type of device they are using.</li>
+							<h2>Statistical Tests of Significance</h2>
+							<ul>
+								<li><strong>T-Test:</strong> Commonly used to compare the means of two groups to determine if there is a statistically significant difference.</li>
+								<li><strong>Welch's T-Test:</strong> A variation of the T-Test that does not assume equal variances between groups.</li>
+								<li><strong>Chi-Squared Test:</strong> Used for categorical data to assess if there's an association or difference in proportions between groups.</li>
+								<li><strong>Mann-Whitney U Test:</strong> Non-parametric test for comparing the distributions of two groups when assumptions of normality are not met.</li>
+								<li><strong>Analysis of Variance (ANOVA):</strong> Extends the T-Test to more than two groups to determine if there are significant differences among group means.</li>
+								<li><strong>Kruskal-Wallis Test:</strong> Non-parametric alternative to ANOVA when assumptions of normality are not met.</li>
+								<li><strong>Chi-Squared Goodness of Fit Test:</strong> Used to compare observed and expected frequencies in one group, often used for A/B tests with multiple variations.</li>
+								<li><strong>Paired T-Test:</strong> Compares the means of paired or dependent samples, useful for before-and-after A/B tests.</li>
+								<li><strong>Sequential Testing:</strong> Adaptive testing methods that allow for ongoing monitoring of A/B tests and early stopping if significance is reached.</li>
+							</ul>
 
-        <li><strong>Consistency in Testing Environment:</strong> Ensure that the testing environment is consistent across different geographic regions and device types. Make operational adjustments as required</li>
+							<h2>Significance Testing: Geo-Targeting Campaign Example</h2>
+							<p>This data is simulated based on experiences of a Geo-Targeting Campaign. The responses are exaggerated to demonstrate how this could work.</p>
+							<object data="images/c4/abhist.svg" type="image/svg+xml" width="900" height="600"></object>
+							<p>Group A is the control group. The engagement value proposition on Group C hasn't really had much impact, only with a marginal increase of spread — meaning consumers responded favorably and unfavorably as well. Group B seems to have a visible right shift with some increase in variance, as we expect in an engagement campaign.</p>
+							<object data="images/c4/cpdf.svg" type="image/svg+xml" width="900" height="600"></object>
+							<p>The cumulative distribution view of the distribution shows how the Group B distribution stands out and has little or no intersection in terms of performance distribution.</p>
 
-        <li><strong>Time Zone Considerations:</strong> Be aware of time zone differences when analyzing the results of geo-targeted campaigns. Normalize to GMT</li>
+							<h3>Welch's T-Test</h3>
+							<p>The Welch's T-Test assumes that the targets and controls are normally distributed but have different means and standard deviations.</p>
+							<table border="1" class="dataframe">
+								<thead>
+									<tr style="text-align: right;">
+										<th></th>
+										<th>Group Comparison</th>
+										<th>T-Statistic</th>
+										<th>P-Value</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>0</th>
+										<td>Group A vs. Group B</td>
+										<td>-263.772478</td>
+										<td>0.000000e+00</td>
+									</tr>
+									<tr>
+										<th>1</th>
+										<td>Group A vs. Group C</td>
+										<td>-17.284281</td>
+										<td>1.868456e-66</td>
+									</tr>
+									<tr>
+										<th>2</th>
+										<td>Group B vs. Group C</td>
+										<td>325.328065</td>
+										<td>0.000000e+00</td>
+									</tr>
+								</tbody>
+							</table>
 
-        <li><strong>Traffic Volume Monitoring:</strong> Monitor the traffic volume in each geo-targeted group to ensure a sufficient sample size for statistical significance.</li>
-
-        <li><strong>Statistical Significance Threshold:</strong> Set a predefined threshold for statistical significance before starting the A/B test.</li>
-
-        <li><strong>Control Group:</strong> Include a control group that receives no campaign or the existing campaign to compare against the variants.</li>
-
-        <li><strong>Data Privacy Compliance:</strong> Ensure that your testing complies with data privacy regulations.</li>
-
-        <li><strong>Monitoring and Alerting:</strong> Implement real-time monitoring and alerting systems to detect anomalies or issues during the A/B test.</li>
-
-        <li><strong>Documentation:</strong> Maintain detailed documentation of the A/B test setup, including the targeted regions, device types, sample sizes, statistical methods, and timeline.</li>
-
-        <li><strong>Post-Test Analysis:</strong> Conduct a thorough post-test analysis, including statistical analysis and interpretation of results.</li>
-
-        <li><strong>Feedback Loop:</strong> Establish a feedback loop to communicate results and insights with relevant teams and optimize future campaigns.</li>
-    </ol>
-
-    <p>By implementing these operational controls, you can ensure that your A/B tests on geo-targeted campaigns with physical fulfillment are conducted accurately and ethically, leading to meaningful results and data-driven decisions.</p>
-	 <h2> Split a target audience into multiple A/B test groups </h2>
-	 <ul>
-  <li>Identify the Target Audience: Determine who your target audience is for the A/B test, such as specific user segments or demographics.</li>
-  <li>Segmentation Criteria: Define the criteria for segmenting the audience, which could include factors like device type, access and interest</li>
-  <li>Random Sampling: Use a random sampling method to assign individuals from the target audience to different groups. This ensures that each group is representative of the overall audience.</li>
-  <li>Group Size and Ratio: Decide on the size of each group and the ratio in which you want to split the audience. Common ratios such as
-  50/50 (equal split) can be debated for lost opportunities. The split is a function of length of time, budget etc to see necessary effect</li>
-  <li>Assigning Unique Identifiers: Assign a unique identifier or cookie to each user in a group to ensure they consistently see the same version of the test content during their visits.</li>
-  <li>Implement A/B Test: Create and implement the A/B test variations for each group, making sure that the content or changes you want to test are applied accurately.</li>
-  <li>Data Collection: Gather data on user interactions and behaviors for each group, tracking relevant metrics like conversion rates, click-through rates, or other key performance indicators (KPIs).</li>
-  <li>Analysis: Analyze the collected data to compare the performance of different test variations within each group. Determine which variation yields the desired results.</li>
-  <li>Statistical Significance: Use statistical analysis, such as hypothesis testing (e.g., t-tests or chi-squared tests), to assess if the observed differences are statistically significant.</li>
-  <li>Draw Conclusions: Based on the analysis, draw conclusions about the effectiveness of each variation and decide whether to implement changes or optimizations based on the results.</li>
-  <li>Iterate: Depending on the outcomes, you may iterate and conduct further A/B tests to refine your strategies and continuously improve the user experience.</li>
-</ul>
- <p> These steps allow you to effectively split your target audience into multiple A/B test groups and assess the impact of different variations on user behavior and outcomes. </p>
- 
-  <h2>Statistical Tests of Significance</h2>
- 
-    
-    <ul>
-        <li><strong>T-Test:</strong> Commonly used to compare the means of two groups to determine if there is a statistically significant difference.</li>
-        <li><strong>Welch's T-Test:</strong> A variation of the T-Test that does not assume equal variances between groups.</li>
-        <li><strong>Chi-Squared Test:</strong> Used for categorical data to assess if there's an association or difference in proportions between groups.</li>
-        <li><strong>Mann-Whitney U Test:</strong> Non-parametric test for comparing the distributions of two groups when assumptions of normality are not met.</li>
-        <li><strong>Analysis of Variance (ANOVA):</strong> Extends the T-Test to more than two groups to determine if there are significant differences among group means.</li>
-        <li><strong>Kruskal-Wallis Test:</strong> Non-parametric alternative to ANOVA when assumptions of normality are not met.</li>
-        <li><strong>Chi-Squared Goodness of Fit Test:</strong> Used to compare observed and expected frequencies in one group, often used for A/B tests with multiple variations.</li>
-        <li><strong>Paired T-Test:</strong> Compares the means of paired or dependent samples, useful for before-and-after A/B tests.</li>
-        <li><strong>Sequential Testing:</strong> Adaptive testing methods that allow for ongoing monitoring of A/B tests and early stopping if significance is reached.</li>
-    </ul>
-	
-	<h2> Significance Testing: Geo-Targeting Campaign example</h2>
-	
-	<p> This data is simulated based on experiences of Geo-Targeting Campaign. The responses are exaggerated to demonstrate how this could work </p>
-	<object data="images/c4/abhist.svg" type="image/svg+xml" width="900" height="600">
-								</object>
-	<p> Group A is the control group the engagement valu proposition on Group C hasn't really had much impact only with marginal increase of spread- meaning consumers responded favorly and unfavorly as well. Group C seems to have a visible right shift with some increase in variance as we expect in a engagement campaign</p>
-	<object data="images/c4/cpdf.svg" type="image/svg+xml" width="900" height="600">
-								</object>
-	<p> The cumulative distribution view of the distribution shows how the group B distribution stands out and has little or no intersection in terms of performance distribution. </p>
-	<h3> Welch's T-Test</h3>
-	<p> The Welch's T Test assumes that the targets and controls are normally distributed but has different mean and standard deviation. </p>
-	<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Group Comparison</th>
-      <th>T-Statistic</th>
-      <th>P-Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Group A vs. Group B</td>
-      <td>-263.772478</td>
-      <td>0.000000e+00</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Group A vs. Group C</td>
-      <td>-17.284281</td>
-      <td>1.868456e-66</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Group B vs. Group C</td>
-      <td>325.328065</td>
-      <td>0.000000e+00</td>
-    </tr>
-  </tbody>
-</table>
-	
 						</div>
 					</div>
 
@@ -192,13 +176,10 @@
 								<h2>Follow</h2>
 								<ul class="icons">
 									<li><a href="https://twitter.com/sxd213" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.linkedin.com/in/sumitdhar71/" class="icon brands style2 fa-linkedin"><span class="label">linkedin</span></a></li>
-<!-- 									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+									<li><a href="https://www.linkedin.com/in/sumitdhar71/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/sdhar2020/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<!-- <li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li> -->
-									<li><a href="334-444-5513" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="sdhar.careers@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="tel:4154759882" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="mailto:sdhar@data-intuition.ai" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
