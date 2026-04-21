@@ -6,9 +6,10 @@
 -->
 <html>
 	<head>
-		<title>Optimizing Vending Machine Placement</title>
+		<title>Rightsize & Placement Optimization | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Vending machine placement optimization using K-means clustering and linear sum assignment — maximizing sales while minimizing operational costs. Data-Intuition.AI case study." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -22,7 +23,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">DATA-INTUITION.AI</span>
+									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Data-Intuition.AI</span>
 								</a>
 
 							<!-- Nav -->
@@ -40,8 +41,11 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="About Us.html">About</a></li>
-							<li><a href="Partners.html">Partner Certification</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="methodology.html">Methodology</a></li>
+							<li><a href="https://www.credly.com/users/sumit-dhar-ai-ml-datascience" target="_blank">Certifications</a></li>
+							<li><a href="insights.html">Insights</a></li>
 							<li><a href="generic.html">Contact</a></li>
 						</ul>
 					</nav>
@@ -49,20 +53,24 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Optimizing Vending Machine Placement: An Overview</h1>
-							
+							<h1>Optimizing Vending Machine Placement</h1>
+
 							<p>Vending machine placement optimization is part of a broader class of facility location problems, which aim to identify the best locations for facilities (e.g., machines, stores, or warehouses) within a given space. These problems are crucial for enhancing operational efficiency, reducing costs, and improving user experience. In this specific problem, the objective is to strategically place vending machines across multiple locations to maximize sales and minimize operational challenges, such as underutilization or high maintenance costs.</p>
-							
+
 							<h2>Understanding the Problem Through Optimization</h2>
 							<p>In this problem, multiple optimization scenarios are explored to improve the placement of vending machines across various locations. The process starts with analyzing sales data to identify underperforming machines. Using K-means clustering, vending machines are grouped based on their sales performance, helping identify high- and low-performing locations. Underperforming machines are then moved to high-performing locations to boost overall sales.</p>
 							<p>The second phase of optimization incorporates moving costs and location constraints. For instance, each location has a capacity limit for the number of machines it can accommodate. A cost matrix is used to calculate the expenses associated with moving machines from one location to another. Linear sum assignment is then employed to find the optimal machine reassignment plan, ensuring that moves are cost-efficient and within location limits.</p>
+
 							<h2>Visualization of Optimization Results</h2>
-							<span class="image main"><img src="images/c5/sales_before_after_optimization.png" alt="" /></span>
+							<span class="image main"><img src="images/c5/sales_before_after_optimization.png" alt="Sales before and after optimization" /></span>
 							<p>Sales Before & After Optimization (Bar Chart): This chart shows the sales across locations, comparing the status quo with the results from both optimization scenarios. It highlights the changes in sales and the improvements achieved after the machine reassignments.</p>
-							<span class="image main"><img src="images/c5/machine_density_heatmap.png" alt="" /></span>
+
+							<span class="image main"><img src="images/c5/machine_density_heatmap.png" alt="Machine density heatmap" /></span>
 							<p>Machine Density Heatmap: This heatmap visualizes the distribution of vending machines across locations and scenarios, providing insights into how the machine placement changes after optimization.</p>
-							<span class="image main"><img src="images/c5/machine_reassignments.png" alt="" /></span>
+
+							<span class="image main"><img src="images/c5/machine_reassignments.png" alt="Machine reassignment network diagram" /></span>
 							<p>Machine Reassignments (Network Diagram): This diagram illustrates the specific moves of vending machines from underperforming locations to high-performing ones. The edges represent the moves, providing a clear view of the reassignments.</p>
+
 						</div>
 					</div>
 
@@ -71,7 +79,7 @@
 						<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
-								<form method="post" action="#">
+								<form method="post" action="https://formspree.io/f/myyveqgb">
 									<div class="fields">
 										<div class="field half">
 											<input type="text" name="name" id="name" placeholder="Name" />
@@ -91,14 +99,11 @@
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://twitter.com/sxd213" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.linkedin.com/in/sumitdhar71/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/sdhar2020/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="tel:4154759882" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="mailto:sdhar@data-intuition.ai" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
