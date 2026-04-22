@@ -12,6 +12,35 @@
 		<meta name="description" content="Anomaly detection in solar inverter fleets using Isolation Forest and Random Forest ensemble methods — predicting failures 24 hours in advance. Data-Intuition.AI case study." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Big Picture Callout Styles -->
+		<style>
+			.exec-summary {
+				border-left: 5px solid #e87722;
+				background-color: #fdf6ee;
+				padding: 20px 24px;
+				margin: 0 0 36px 0;
+				border-radius: 0 6px 6px 0;
+			}
+			.exec-summary .exec-label {
+				font-size: 0.7em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #e87722;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.exec-summary p {
+				font-size: 0.95em;
+				line-height: 1.75;
+				color: #1a1a1a;
+				margin: 0 0 10px 0;
+			}
+			.exec-summary p:last-child {
+				margin-bottom: 0;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -54,6 +83,13 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Anomaly Detection</h1>
+
+							<!-- Big Picture Callout -->
+							<div class="exec-summary">
+								<span class="exec-label">The Big Picture</span>
+								<p>In a fleet of 200, eight are failing. Finding them 24 hours before threshold breach is where the value is. An Isolation Forest and Random Forest ensemble scores inverter health across 18 engineered features, producing four actionable risk tiers at 75–85% precision and 70–80% recall. The 96% healthy assets stay quiet; the 4% stand out unmistakably.</p>
+								<p>Fusing thermal, acoustic, and operational log signals into a unified health index — with LLM-generated maintenance narratives delivered directly to field teams — eliminates the interpretation gap between model output and boots-on-the-ground action.</p>
+							</div>
 
 							<h2>Anomaly in Operations</h2>
 							<span class="image main"><img src="images/c7/c71.png" alt="" /></span>

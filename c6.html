@@ -12,6 +12,35 @@
 		<meta name="description" content="Predictive maintenance and prognostics using LSTM deep learning models on NASA CMAPSS turbofan engine sensor data — forecasting Remaining Useful Life for proactive asset management. Data-Intuition.AI case study." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Big Picture Callout Styles -->
+		<style>
+			.exec-summary {
+				border-left: 5px solid #e87722;
+				background-color: #fdf6ee;
+				padding: 20px 24px;
+				margin: 0 0 36px 0;
+				border-radius: 0 6px 6px 0;
+			}
+			.exec-summary .exec-label {
+				font-size: 0.7em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #e87722;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.exec-summary p {
+				font-size: 0.95em;
+				line-height: 1.75;
+				color: #1a1a1a;
+				margin: 0 0 10px 0;
+			}
+			.exec-summary p:last-child {
+				margin-bottom: 0;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -54,6 +83,13 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Predictive Maintenance</h1>
+
+							<!-- Big Picture Callout -->
+							<div class="exec-summary">
+								<span class="exec-label">The Big Picture</span>
+								<p>Scheduled maintenance is expensive. Unplanned downtime is worse. Stacked LSTMs predict Remaining Useful Life with stable convergence and strong generalization — the RUL ≈ 100 inflection point defines the optimal intervention window precisely. Simpler architectures outperform complex ones here: degradation is gradual and locally structured, and model-data alignment beats model sophistication every time.</p>
+								<p>Foundation models pre-trained on industrial sensor corpora are beginning to enable cross-asset RUL prediction with minimal labeled data — a significant shift for organizations managing diverse equipment fleets.</p>
+							</div>
 
 							<h2>Predictive Maintenance and Prognostics</h2>
 							<p>Predictive maintenance and prognostics use AI and machine learning to transform continuous machine sensor data into early, actionable insights about asset health and failure risk. By learning degradation patterns over time, these models forecast remaining useful life, detect emerging faults, and enable maintenance decisions to be made before unplanned downtime occurs. The result is higher reliability, lower maintenance cost, and a shift from reactive repairs to data-driven, proactive asset management.</p>

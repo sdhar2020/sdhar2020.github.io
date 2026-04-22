@@ -42,6 +42,33 @@
 				border-color: #6a72a0;
 				color: #ffffff;
 			}
+
+			/* Big Picture Callout */
+			.exec-summary {
+				border-left: 5px solid #e87722;
+				background-color: #fdf6ee;
+				padding: 20px 24px;
+				margin: 0 0 36px 0;
+				border-radius: 0 6px 6px 0;
+			}
+			.exec-summary .exec-label {
+				font-size: 0.7em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #e87722;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.exec-summary p {
+				font-size: 0.95em;
+				line-height: 1.75;
+				color: #1a1a1a;
+				margin: 0 0 10px 0;
+			}
+			.exec-summary p:last-child {
+				margin-bottom: 0;
+			}
 		</style>
 
 		<!-- Schema Markup: ProfessionalService -->
@@ -124,6 +151,13 @@
 								<a href="#">Feature Engineering</a>
 								<a href="#">Ensemble Models</a>
 								<a href="#">Predictive Analytics</a>
+							</div>
+
+							<!-- Big Picture Callout -->
+							<div class="exec-summary">
+								<span class="exec-label">The Big Picture</span>
+								<p>Bad forecasts don't just miss — they cascade into inventory, staffing, and capital decisions downstream. This ensemble approach stabilizes at ~0.045 MAE once sufficient history accumulates, combining long-horizon and short-term Ridge models selected segment-by-segment. Fifty-plus interaction features carry signal no univariate model touches.</p>
+								<p>Temporal fusion transformers paired with external signal ingestion — weather, market events, operational context — are where forecast accuracy and business responsiveness converge for organizations ready to treat forecasting as core infrastructure.</p>
 							</div>
 
 							<h2>Forecasting</h2>
