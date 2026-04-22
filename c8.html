@@ -12,6 +12,35 @@
 		<meta name="description" content="Feature-based price and cost prediction using machine learning — Random Forest, Gradient Boosted Trees, and LLM-powered RAG for market data retrieval. Data-Intuition.AI case study." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Big Picture Callout Styles -->
+		<style>
+			.exec-summary {
+				border-left: 5px solid #e87722;
+				background-color: #fdf6ee;
+				padding: 20px 24px;
+				margin: 0 0 36px 0;
+				border-radius: 0 6px 6px 0;
+			}
+			.exec-summary .exec-label {
+				font-size: 0.7em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #e87722;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.exec-summary p {
+				font-size: 0.95em;
+				line-height: 1.75;
+				color: #1a1a1a;
+				margin: 0 0 10px 0;
+			}
+			.exec-summary p:last-child {
+				margin-bottom: 0;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -54,7 +83,14 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Feature Based Price & Cost Prediction</h1>
-							
+
+							<!-- Big Picture Callout -->
+							<div class="exec-summary">
+								<span class="exec-label">The Big Picture</span>
+								<p>If pricing lives in a spreadsheet, margin leakage is structural. Gradient Boosted Trees achieves test R² of 0.967 and MAE of $1.72 across nine covariates — versus Random Forest's $3.30. That delta is quote accuracy and competitive win rate in a single number. When predictions cluster toward the mean on edge cases, that's a data coverage gap, not a model failure — a distinction that shapes where you invest next in data acquisition.</p>
+								<p>RAG-augmented pipelines dynamically retrieve competitor pricing and demand signals, keeping the model current without the overhead of manual feature engineering cycles.</p>
+							</div>
+
 							<p>Feature-Based Price & Cost Prediction is a data-driven approach that uses machine learning and statistical models to estimate the price or cost of a product or service based on its characteristics (features). These features can include material costs, production time, brand, demand, market trends, and historical pricing data.</p>
 
 							<h2>LLMs with RAG Search for Market Data</h2>
