@@ -6,12 +6,74 @@
 -->
 <html>
 	<head>
-		<title>Customer Churn Prediction | Data-Intuition.AI</title>
+		<title>Customer Churn Prediction using Machine Learning for Fintech | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Customer churn prediction for fintech using logistic regression, random forest, and XGBoost — causality analysis, ROC curves, and recall optimization for retention targeting. Data-Intuition.AI case study." />
+		<meta name="description" content="Predict customer churn in fintech using Random Forest and XGBoost — causality analysis, ROC curves, and recall optimization for retention targeting." />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://data-intuition.ai/c3.html" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Pill Tag Styles -->
+		<style>
+			.topic-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin: 12px 0 28px 0;
+			}
+			.topic-tags a {
+				display: inline-block;
+				padding: 5px 14px;
+				border-radius: 20px;
+				font-size: 0.78em;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				text-decoration: none;
+				background-color: #2e3141;
+				color: #ffffff;
+				border: 1px solid #4a5068;
+				transition: background-color 0.2s ease, border-color 0.2s ease;
+			}
+			.topic-tags a:hover {
+				background-color: #3e4255;
+				border-color: #6a72a0;
+				color: #ffffff;
+			}
+		</style>
+
+		<!-- Schema Markup: ProfessionalService -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "SD Analytics, Insights & Data Science (SDAIDS) LLC",
+			"brand": {
+				"@type": "Brand",
+				"name": "Data-Intuition.AI"
+			},
+			"url": "https://data-intuition.ai",
+			"description": "Data-Intuition.AI is a business-first AI and Data Science consultancy specializing in predictive analytics, machine learning, forecasting, anomaly detection, and enterprise AI systems that deliver measurable business impact.",
+			"areaServed": "United States",
+			"knowsAbout": [
+				"Artificial Intelligence",
+				"Machine Learning",
+				"Data Science",
+				"Customer Churn Prediction",
+				"Random Forest",
+				"XGBoost",
+				"Binary Classification",
+				"Retention Analytics"
+			],
+			"sameAs": [
+				"https://www.linkedin.com/in/sumitdhar71/",
+				"https://github.com/sdhar2020/",
+				"https://twitter.com/sxd213"
+			]
+		}
+		</script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -23,7 +85,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Data-Intuition.AI</span>
+									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="Data-Intuition.AI logo" /></span><span class="title">Data-Intuition.AI</span>
 								</a>
 
 							<!-- Nav -->
@@ -55,6 +117,15 @@
 						<div class="inner">
 							<h1>Customer Churn Prediction</h1>
 
+							<!-- Topic Tags: Top -->
+							<div class="topic-tags">
+								<a href="#">Customer Churn</a>
+								<a href="#">Random Forest</a>
+								<a href="#">XGBoost</a>
+								<a href="#">Retention Analytics</a>
+								<a href="#">Binary Classification</a>
+							</div>
+
 							<h2>Customer Churn</h2>
 							<p>As of September 2021, a rough estimate for Customer Acquisition Cost (CAC) could range from $50 to $300 or more per customer. A general guideline for a good attrition rate for subscription-based online businesses was typically around 5% per month. However, it's essential to note that what constitutes a "good" attrition rate can differ significantly between industries, business model, engagement activities, competitive actions, pricing, value proposition, and service quality. Predicting and reducing customer churn or attrition is an interesting challenge.</p>
 
@@ -74,7 +145,7 @@
 							<p>A predictive model establishes causality between seemingly disparate events — e.g., low balance in wallet, app errors while loading money during the observation period — and the probability that a customer may never return due to a degraded experience. A predictive model trained on historical data of causation predicts probability of churn in the prediction period. Assuming causation isn't broken, a churn model can be a valuable asset to design interventions to improve retention.</p>
 
 							<div>
-								<object data="images/c3/churn.svg" type="image/svg+xml" width="900" height="600"></object>
+								<object data="images/c3/churn.svg" type="image/svg+xml" width="900" height="600" title="Customer churn lifecycle diagram showing observation and prediction periods"></object>
 							</div>
 
 							<h2>Introducing the Problem</h2>
@@ -83,14 +154,14 @@
 							<p>The goal is to build a machine learning classification model that can predict the probability of churn in current customers based on the behavior of attrition in the past — meaning the probability of "No future interaction."</p>
 
 							<h2>Exploratory Analysis</h2>
-							<object data="images/c3/hist.svg" type="image/svg+xml" width="900" height="600"></object>
+							<object data="images/c3/hist.svg" type="image/svg+xml" width="900" height="600" title="Univariate histograms of churn predictors including wallet balance and length of relationship"></object>
 							<p>Univariate visualization can show some interesting insights. For example, low balance (&lt;= $5) shows a higher proportion of churn. Similarly, consumers with &gt; 30 days of Length of Relationship tend to churn less.</p>
-							<object data="images/c3/bivar.svg" type="image/svg+xml" width="900" height="600"></object>
+							<object data="images/c3/bivar.svg" type="image/svg+xml" width="900" height="600" title="Bivariate jointplot showing ellipsoidal concentration of churned customers"></object>
 							<p>The bivariate jointplot shows an ellipsoidal area with a large concentration of churns. This is perhaps due to the interaction of two bimodal distributions.</p>
 
 							<h2>Predicting Churn</h2>
 							<p>Three machine learning models — logistic regression, random forest, and XGBoost — for binary classification are developed with hyperparameter fitting using F1 score as the quality metric. The following are the ROC curves:</p>
-							<object data="images/c3/roc.svg" type="image/svg+xml" width="900" height="600"></object>
+							<object data="images/c3/roc.svg" type="image/svg+xml" width="900" height="600" title="ROC curves comparing Logistic Regression, Random Forest and XGBoost churn models"></object>
 							<p>The following are the classification metrics:</p>
 							<table border="1" class="dataframe">
 								<thead>
@@ -148,7 +219,7 @@
 							</table>
 
 							<p>The recall rate is key as it determines the ability to target customers with retention engagement. The model to be used is determined by factors such as budget. In this case the Random Forest model ought to be used.</p>
-							<object data="images/c3/cfm.svg" type="image/svg+xml" width="900" height="600"></object>
+							<object data="images/c3/cfm.svg" type="image/svg+xml" width="900" height="600" title="Confusion matrix for Random Forest churn prediction model"></object>
 
 							<h2>Recall Rate</h2>
 							<p>The recall rate clearly needs to be maximized in the current context. The following steps can be used as next steps:</p>
@@ -159,6 +230,15 @@
 								<li><strong>Threshold Adjustment:</strong> Modify the classification threshold to prioritize recall over precision, particularly when false negatives are more costly than false positives.</li>
 								<li><strong>Ensemble Methods:</strong> Combine multiple models, such as bagging or boosting, to improve overall performance and recall by leveraging the strengths of different algorithms or subsets of the data.</li>
 							</ul>
+
+							<!-- Topic Tags: Bottom -->
+							<div class="topic-tags" style="margin-top: 32px;">
+								<a href="#">Customer Churn</a>
+								<a href="#">Random Forest</a>
+								<a href="#">XGBoost</a>
+								<a href="#">Retention Analytics</a>
+								<a href="#">Binary Classification</a>
+							</div>
 
 						</div>
 					</div>
