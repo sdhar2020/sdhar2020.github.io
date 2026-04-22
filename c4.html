@@ -6,15 +6,44 @@
 -->
 <html>
 	<head>
-		<title>Operationalize A/B Testing | Data-Intuition.AI</title>
+		<title>A/B Testing for Geo-Targeted Campaigns | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="A/B testing framework for geo-targeted campaigns with physical fulfillment — statistical significance testing, audience splitting, and Welch's T-Test analysis. Data-Intuition.AI case study." />
+		<meta name="description" content="Operationalize A/B testing for geo-targeted campaigns — stratified sampling, Welch's T-Test, multi-armed bandits, and Bayesian testing frameworks." />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://data-intuition.ai/c4.html" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Big Picture Callout Styles -->
+		<!-- Pill Tag Styles -->
 		<style>
+			.topic-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin: 12px 0 28px 0;
+			}
+			.topic-tags a {
+				display: inline-block;
+				padding: 5px 14px;
+				border-radius: 20px;
+				font-size: 0.78em;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				text-decoration: none;
+				background-color: #2e3141;
+				color: #ffffff;
+				border: 1px solid #4a5068;
+				transition: background-color 0.2s ease, border-color 0.2s ease;
+			}
+			.topic-tags a:hover {
+				background-color: #3e4255;
+				border-color: #6a72a0;
+				color: #ffffff;
+			}
+
+			/* Business Impact Block */
 			.exec-summary {
 				border-left: 5px solid #e87722;
 				background-color: #fdf6ee;
@@ -41,6 +70,37 @@
 				margin-bottom: 0;
 			}
 		</style>
+
+		<!-- Schema Markup: ProfessionalService -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "SD Analytics, Insights & Data Science (SDAIDS) LLC",
+			"brand": {
+				"@type": "Brand",
+				"name": "Data-Intuition.AI"
+			},
+			"url": "https://data-intuition.ai",
+			"description": "Data-Intuition.AI is a business-first AI and Data Science consultancy specializing in predictive analytics, machine learning, forecasting, anomaly detection, and enterprise AI systems that deliver measurable business impact.",
+			"areaServed": "United States",
+			"knowsAbout": [
+				"A/B Testing",
+				"Statistical Significance Testing",
+				"Geo-Targeted Campaigns",
+				"Bayesian Testing",
+				"Multi-Armed Bandits",
+				"Campaign Analytics",
+				"Welch's T-Test",
+				"Experimental Design"
+			],
+			"sameAs": [
+				"https://www.linkedin.com/in/sumitdhar71/",
+				"https://github.com/sdhar2020/",
+				"https://twitter.com/sxd213"
+			]
+		}
+		</script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -52,7 +112,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Data-Intuition.AI</span>
+									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="Data-Intuition.AI logo" /></span><span class="title">Data-Intuition.AI</span>
 								</a>
 
 							<!-- Nav -->
@@ -84,11 +144,20 @@
 						<div class="inner">
 							<h1>Setting Up A/B Testing</h1>
 
-							<!-- Big Picture Callout -->
+							<!-- Topic Tags -->
+							<div class="topic-tags">
+								<a href="#">A/B Testing</a>
+								<a href="#">Statistical Significance</a>
+								<a href="#">Geo-Targeting</a>
+								<a href="#">Bayesian Testing</a>
+								<a href="#">Campaign Analytics</a>
+							</div>
+
+							<!-- Business Impact Block -->
 							<div class="exec-summary">
-								<span class="exec-label">The Big Picture</span>
-								<p>Intuition doesn't scale. This framework operationalizes A/B testing for geo-targeted campaigns with physical fulfillment — fourteen operational controls, Welch's T-Test for unequal variances, multi-group design. Group B's result is unambiguous: t-statistic of -263.8, p-value at zero. Group C's wide spread is a product-market fit signal — polarized response, not a win.</p>
-								<p>Bayesian continuous testing removes the fixed read-out constraint entirely — traffic reallocates dynamically toward winning variants, compressing the time from hypothesis to scaled decision.</p>
+								<span class="exec-label">⚡ Why This Matters</span>
+								<p>Most A/B tests produce inconclusive results — not because the underlying effect isn't real, but because the test was under-powered, poorly segmented, or stopped too early. This framework operationalizes A/B testing for geo-targeted campaigns with physical fulfillment — fourteen operational controls, Welch's T-Test for unequal variances, multi-group design. Group B's result is unambiguous: t-statistic of -263.8, p-value at zero. Group C's wide spread is a product-market fit signal — polarized response, not a win.</p>
+								<p>Modern extensions include multi-armed bandit frameworks (Thompson Sampling, UCB) for adaptive traffic allocation, Bayesian A/B testing for earlier decision-making, and LLM-powered variant generation that produces and tests dozens of creative permutations simultaneously — compressing the time from hypothesis to scaled decision.</p>
 							</div>
 
 							<h2>A/B Test</h2>
@@ -145,9 +214,9 @@
 
 							<h2>Significance Testing: Geo-Targeting Campaign Example</h2>
 							<p>This data is simulated based on experiences of a Geo-Targeting Campaign. The responses are exaggerated to demonstrate how this could work.</p>
-							<object data="images/c4/abhist.svg" type="image/svg+xml" width="900" height="600"></object>
+							<object data="images/c4/abhist.svg" type="image/svg+xml" width="900" height="600" title="Histogram comparing engagement distributions across A/B test Groups A, B and C"></object>
 							<p>Group A is the control group. The engagement value proposition on Group C hasn't really had much impact, only with a marginal increase of spread — meaning consumers responded favorably and unfavorably as well. Group B seems to have a visible right shift with some increase in variance, as we expect in an engagement campaign.</p>
-							<object data="images/c4/cpdf.svg" type="image/svg+xml" width="900" height="600"></object>
+							<object data="images/c4/cpdf.svg" type="image/svg+xml" width="900" height="600" title="Cumulative distribution function showing Group B separation from control in geo-targeted campaign"></object>
 							<p>The cumulative distribution view of the distribution shows how the Group B distribution stands out and has little or no intersection in terms of performance distribution.</p>
 
 							<h3>Welch's T-Test</h3>
@@ -182,6 +251,15 @@
 									</tr>
 								</tbody>
 							</table>
+
+							<!-- Topic Tags: Bottom -->
+							<div class="topic-tags" style="margin-top: 32px;">
+								<a href="#">A/B Testing</a>
+								<a href="#">Statistical Significance</a>
+								<a href="#">Geo-Targeting</a>
+								<a href="#">Bayesian Testing</a>
+								<a href="#">Campaign Analytics</a>
+							</div>
 
 						</div>
 					</div>
