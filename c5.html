@@ -6,12 +6,100 @@
 -->
 <html>
 	<head>
-		<title>Rightsize & Placement Optimization | Data-Intuition.AI</title>
+		<title>Facility Location Optimization using K-Means Clustering & Linear Assignment | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Vending machine placement optimization using K-means clustering and linear sum assignment — maximizing sales while minimizing operational costs. Data-Intuition.AI case study." />
+		<meta name="description" content="Optimize vending machine placement using K-means clustering, cost matrix analysis, and linear sum assignment to maximize sales and minimize operational costs." />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://data-intuition.ai/c5.html" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Pill Tag & Business Impact Styles -->
+		<style>
+			.topic-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin: 12px 0 28px 0;
+			}
+			.topic-tags a {
+				display: inline-block;
+				padding: 5px 14px;
+				border-radius: 20px;
+				font-size: 0.78em;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				text-decoration: none;
+				background-color: #2e3141;
+				color: #ffffff;
+				border: 1px solid #4a5068;
+				transition: background-color 0.2s ease, border-color 0.2s ease;
+			}
+			.topic-tags a:hover {
+				background-color: #3e4255;
+				border-color: #6a72a0;
+				color: #ffffff;
+			}
+
+			/* Business Impact Block */
+			.exec-summary {
+				border-left: 5px solid #e87722;
+				background-color: #fdf6ee;
+				padding: 20px 24px;
+				margin: 0 0 36px 0;
+				border-radius: 0 6px 6px 0;
+			}
+			.exec-summary .exec-label {
+				font-size: 0.7em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #e87722;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.exec-summary p {
+				font-size: 0.95em;
+				line-height: 1.75;
+				color: #1a1a1a;
+				margin: 0 0 10px 0;
+			}
+			.exec-summary p:last-child {
+				margin-bottom: 0;
+			}
+		</style>
+
+		<!-- Schema Markup: ProfessionalService -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "SD Analytics, Insights & Data Science (SDAIDS) LLC",
+			"brand": {
+				"@type": "Brand",
+				"name": "Data-Intuition.AI"
+			},
+			"url": "https://data-intuition.ai",
+			"description": "Data-Intuition.AI is a business-first AI and Data Science consultancy specializing in predictive analytics, machine learning, forecasting, anomaly detection, and enterprise AI systems that deliver measurable business impact.",
+			"areaServed": "United States",
+			"knowsAbout": [
+				"Facility Location Optimization",
+				"K-Means Clustering",
+				"Linear Sum Assignment",
+				"Sales Optimization",
+				"Cost Matrix Analysis",
+				"Operations Research",
+				"Capital Deployment Optimization"
+			],
+			"sameAs": [
+				"https://www.linkedin.com/in/sumitdhar71/",
+				"https://github.com/sdhar2020/",
+				"https://twitter.com/sxd213"
+			]
+		}
+		</script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -23,7 +111,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Data-Intuition.AI</span>
+									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="Data-Intuition.AI logo" /></span><span class="title">Data-Intuition.AI</span>
 								</a>
 
 							<!-- Nav -->
@@ -55,6 +143,22 @@
 						<div class="inner">
 							<h1>Optimizing Vending Machine Placement</h1>
 
+							<!-- Topic Tags: Top -->
+							<div class="topic-tags">
+								<a href="#">Facility Location Problems</a>
+								<a href="#">Linear Sum Assignment</a>
+								<a href="#">Sales Optimization</a>
+								<a href="#">Cost Matrix</a>
+								<a href="#">Placement Optimization</a>
+							</div>
+
+							<!-- Business Impact Block -->
+							<div class="exec-summary">
+								<span class="exec-label">⚡ Why This Matters</span>
+								<p>Capital deployed in the wrong locations compounds losses — every underperforming unit represents both a direct revenue shortfall and an opportunity cost at a high-demand site that is under-served. Facility location problems of this class apply equally to ATMs, EV chargers, retail kiosks, and warehouse nodes.</p>
+								<p>K-Means clustering identifies performance tiers; linear sum assignment finds the cost-optimal reallocation within capacity constraints. Modern extensions incorporate geospatial APIs (Google Places, Foursquare), real-time foot traffic data, and LLM-synthesized local intelligence — enabling placement decisions that go beyond what structured sales data alone can support.</p>
+							</div>
+
 							<p>Vending machine placement optimization is part of a broader class of facility location problems, which aim to identify the best locations for facilities (e.g., machines, stores, or warehouses) within a given space. These problems are crucial for enhancing operational efficiency, reducing costs, and improving user experience. In this specific problem, the objective is to strategically place vending machines across multiple locations to maximize sales and minimize operational challenges, such as underutilization or high maintenance costs.</p>
 
 							<h2>Understanding the Problem Through Optimization</h2>
@@ -62,14 +166,23 @@
 							<p>The second phase of optimization incorporates moving costs and location constraints. For instance, each location has a capacity limit for the number of machines it can accommodate. A cost matrix is used to calculate the expenses associated with moving machines from one location to another. Linear sum assignment is then employed to find the optimal machine reassignment plan, ensuring that moves are cost-efficient and within location limits.</p>
 
 							<h2>Visualization of Optimization Results</h2>
-							<span class="image main"><img src="images/c5/sales_before_after_optimization.png" alt="Sales before and after optimization" /></span>
+							<span class="image main"><img src="images/c5/sales_before_after_optimization.png" alt="Bar chart comparing vending machine sales across locations before and after K-means placement optimization" /></span>
 							<p>Sales Before & After Optimization (Bar Chart): This chart shows the sales across locations, comparing the status quo with the results from both optimization scenarios. It highlights the changes in sales and the improvements achieved after the machine reassignments.</p>
 
-							<span class="image main"><img src="images/c5/machine_density_heatmap.png" alt="Machine density heatmap" /></span>
+							<span class="image main"><img src="images/c5/machine_density_heatmap.png" alt="Heatmap showing vending machine density distribution across locations before and after optimization" /></span>
 							<p>Machine Density Heatmap: This heatmap visualizes the distribution of vending machines across locations and scenarios, providing insights into how the machine placement changes after optimization.</p>
 
-							<span class="image main"><img src="images/c5/machine_reassignments.png" alt="Machine reassignment network diagram" /></span>
+							<span class="image main"><img src="images/c5/machine_reassignments.png" alt="Network diagram showing vending machine reassignments from underperforming to high-performing locations" /></span>
 							<p>Machine Reassignments (Network Diagram): This diagram illustrates the specific moves of vending machines from underperforming locations to high-performing ones. The edges represent the moves, providing a clear view of the reassignments.</p>
+
+							<!-- Topic Tags: Bottom -->
+							<div class="topic-tags" style="margin-top: 32px;">
+								<a href="#">Facility Location Problems</a>
+								<a href="#">Linear Sum Assignment</a>
+								<a href="#">Sales Optimization</a>
+								<a href="#">Cost Matrix</a>
+								<a href="#">Placement Optimization</a>
+							</div>
 
 						</div>
 					</div>
