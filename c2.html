@@ -6,12 +6,74 @@
 -->
 <html>
 	<head>
-		<title>Forecasting & Prediction | Data-Intuition.AI</title>
+		<title>Energy Consumption Forecasting using Ridge Regression & Ensemble Models | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Energy consumption forecasting using Ridge Regression with time-series cross validation, feature engineering, and opportunistic ensemble models. Data-Intuition.AI case study." />
+		<meta name="description" content="Time-series energy consumption forecasting using Ridge Regression, feature engineering, and opportunistic ensemble models across 48 prediction segments." />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://data-intuition.ai/c2.html" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Pill Tag Styles -->
+		<style>
+			.topic-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin: 12px 0 28px 0;
+			}
+			.topic-tags a {
+				display: inline-block;
+				padding: 5px 14px;
+				border-radius: 20px;
+				font-size: 0.78em;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				text-decoration: none;
+				background-color: #2e3141;
+				color: #ffffff;
+				border: 1px solid #4a5068;
+				transition: background-color 0.2s ease, border-color 0.2s ease;
+			}
+			.topic-tags a:hover {
+				background-color: #3e4255;
+				border-color: #6a72a0;
+				color: #ffffff;
+			}
+		</style>
+
+		<!-- Schema Markup: ProfessionalService -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "SD Analytics, Insights & Data Science (SDAIDS) LLC",
+			"brand": {
+				"@type": "Brand",
+				"name": "Data-Intuition.AI"
+			},
+			"url": "https://data-intuition.ai",
+			"description": "Data-Intuition.AI is a business-first AI and Data Science consultancy specializing in predictive analytics, machine learning, forecasting, anomaly detection, and enterprise AI systems that deliver measurable business impact.",
+			"areaServed": "United States",
+			"knowsAbout": [
+				"Artificial Intelligence",
+				"Machine Learning",
+				"Data Science",
+				"Predictive Analytics",
+				"Time-Series Forecasting",
+				"Ridge Regression",
+				"Feature Engineering",
+				"Ensemble Models"
+			],
+			"sameAs": [
+				"https://www.linkedin.com/in/sumitdhar71/",
+				"https://github.com/sdhar2020/",
+				"https://twitter.com/sxd213"
+			]
+		}
+		</script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -23,7 +85,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Data-Intuition.AI</span>
+									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="Data-Intuition.AI logo" /></span><span class="title">Data-Intuition.AI</span>
 								</a>
 
 							<!-- Nav -->
@@ -55,6 +117,15 @@
 						<div class="inner">
 							<h1>Forecasting & Prediction</h1>
 
+							<!-- Topic Tags: Top -->
+							<div class="topic-tags">
+								<a href="#">Time-Series Forecasting</a>
+								<a href="#">Ridge Regression</a>
+								<a href="#">Feature Engineering</a>
+								<a href="#">Ensemble Models</a>
+								<a href="#">Predictive Analytics</a>
+							</div>
+
 							<h2>Forecasting</h2>
 							<p>Accurate forecasting improves predictability in the business environment. The ability to predict the future based on past trends helps in planning, business budgeting, and goal setting. The ability to accurately predict future demand and business size depends on the following:</p>
 							<ol>
@@ -74,33 +145,33 @@
 
 							<h2>Illustrative Example</h2>
 							<p>The example below is from an energy consumption forecasting use case. The energy consumption data spans approximately 4 years at an hourly level.</p>
-							<span class="image main"><img src="images/c2/1.TrainTest.svg" alt="Train and test split visualization" /></span>
+							<span class="image main"><img src="images/c2/1.TrainTest.svg" alt="4-year hourly energy consumption dataset with train and test split segments highlighted" /></span>
 							<p>The problem is to predict the energy consumption for the test set that is interspersed across all 4 years for different lengths of time at an hourly level. These are the beige-colored vertical lines in the above figure.</p>
 
 							<h3>Prediction Topology</h3>
-							<span class="image main"><img src="images/c2/2.TestTrainStacked.svg" alt="Stacked train and test topology" /></span>
+							<span class="image main"><img src="images/c2/2.TestTrainStacked.svg" alt="Stacked bar chart showing train and test data point counts across 48 time segments" /></span>
 							<p>The above diagram is a compact way to visualize the prediction problem at hand. The bars are stacked counts of data points in time that are consistent with causality — the orange are the group of points in test and the blue is the count of datetime data points in training that precede them. In effect, for building predictions for each orange set, the preceding blue set needs to be used.</p>
 							<p>Overall, this problem is akin to building weekly/daily forecasts based on previous business performance and demand. As more history accumulates, the ability to produce more accurate predictions improves. For example, in the 0th time segment the train/test set sizes are almost similar, whereas in the 47th time segment you have nearly 4 years of history to predict approximately 22 days — encompassing long and short-term signals.</p>
 
 							<h3>Exploratory Analysis</h3>
-							<span class="image main"><img src="images/c2/3.Hist.svg" alt="Histogram exploratory analysis" /></span>
+							<span class="image main"><img src="images/c2/3.Hist.svg" alt="Histogram of energy consumption by categorical variable, day of week, and time heatmap" /></span>
 							<ol start="1">
 								<li>The histogram shows the consumption metric rendered by a categorical variable var2 with values A, B, and C. Values B and C are sparse, meaning without some kind of sampling approach it is unlikely we shall see much stand-alone impact in the prediction algorithm.</li>
 								<li>This bar graph shows the distribution of consumption across each day of the week, rendered by non-working days — 5 and 6 being Saturday and Sunday. It appears that holidays on weekdays lead to higher consumption. A mental note to create a feature for holidays.</li>
 								<li>The heatmap shows that weekends late at night show increased consumption, while weekdays after midday show lower load. This appears counter-intuitive but each use case has its own nuances that we need to build on. Four years of history provides enough data to generalize.</li>
 							</ol>
-							<span class="image main"><img src="images/c2/4.Scater.svg" alt="Scatter plot analysis" /></span>
+							<span class="image main"><img src="images/c2/4.Scater.svg" alt="Scatter plots of energy consumption vs var1, temperature, and wind speed by season" /></span>
 							<ol start="4">
 								<li>This scatter plot rendered by season shows that the variable var1 has little or no relationship/causality with consumption.</li>
 								<li>This scatter plot looks similar to the first one, giving reasons to think var1 and temperature are collinear.</li>
 								<li>Wind speed has an inverse relationship with consumption. This is a non-linear relationship and gives us opportunities to model differently.</li>
 							</ol>
-							<span class="image main"><img src="images/c2/5.Regplot.svg" alt="Regression plot analysis" /></span>
+							<span class="image main"><img src="images/c2/5.Regplot.svg" alt="Regression plots showing relationship between energy consumption, pressure and temperature" /></span>
 							<ol start="7">
 								<li>Pressure and consumption show little relationship with each other.</li>
 								<li>Temperature shows a linear decreasing relationship with consumption. Ditto for var1.</li>
 							</ol>
-							<span class="image main"><img src="images/c2/6.timeagg.svg" alt="Time aggregation plot" /></span>
+							<span class="image main"><img src="images/c2/6.timeagg.svg" alt="Monthly and quarterly mean energy consumption with standard deviation over 4 years" /></span>
 							<p>The monthly and quarterly means don't show any significant trend. However, towards the end the consumption pattern shows more variation around the long-term mean. The standard deviation, although range-bound, shows variation — resulting in some heteroscedasticity.</p>
 
 							<h2>Model Development</h2>
@@ -117,7 +188,7 @@
 								<li>One-hot encoded variables <code>'var2_B', 'var2_C'</code></li>
 								<li>~50 interaction variables between hourly spline variables and categorical and binary variables to capture spikes and troughs due to interactions.</li>
 							</ol>
-							<span class="image main"><img src="images/c2/7.Periodicfeatures.svg" alt="Periodic features visualization" /></span>
+							<span class="image main"><img src="images/c2/7.Periodicfeatures.svg" alt="Trigonometric and spline periodic feature engineering for hourly and monthly cycles" /></span>
 
 							<h3>Training and Prediction</h3>
 							<p>Two sets of models were developed — one looking at long-term data and the other at short-term performance. Both models use <code>RidgeCV</code> to optimize the <code>Mean Absolute Error</code> in a K=5 cross-validating framework for each of the 48 time segments.</p>
@@ -134,14 +205,14 @@ ts_cv = TimeSeriesSplit(
     )
 ridgecv = RidgeCV(alphas = alphas, scoring = 'neg_mean_absolute_error', normalize = True, cv= ts_cv).fit(X_train, y_train)
 							</pre>
-							<span class="image main"><img src="images/c2/8.RegCoeff1yr.svg" alt="Ridge regression coefficients heatmap 1 year" /></span>
+							<span class="image main"><img src="images/c2/8.RegCoeff1yr.svg" alt="Heatmap of Ridge Regression feature coefficients across 48 time segments up to 1 year window" /></span>
 							<p>The above diagram is a heatmap of the coefficients of the features in the ridge regression. Until a year's worth of training data is available, the values fluctuate and appear unstable — after that the values appear consistent. The top 10 features with highest significance are:</p>
 							<pre>['var1', 'windspeed', 'Mnth_spline_2', 'Mnth_spline_5', 'Month_cos',
 'temperature', 'Mnth_spline', 'var2_B hr_spline_10',
 'Month_sin', 'var2_B hr_spline_2']</pre>
-							<span class="image main"><img src="images/c2/9.MAEMAPE by TrainSegment i1 yr.svg" alt="MAE and MAPE by train segment 1 year" /></span>
+							<span class="image main"><img src="images/c2/9.MAEMAPE by TrainSegment i1 yr.svg" alt="MAE and MAPE error metrics by training segment for 1-year long-term window model" /></span>
 							<p>The MAE value improves after the 13th time segment, presumably because the longer-term history helps stabilize the score. The MAE stabilizes at around ~0.045 after the 12th time segment — not bad, and works well when the long-term signal is isolated from the data using this model.</p>
-							<span class="image main"><img src="images/c2/10.Max1yrPreds.svg" alt="Long term predictions 1 year max window" /></span>
+							<span class="image main"><img src="images/c2/10.Max1yrPreds.svg" alt="Long-term Ridge Regression predictions vs actuals across all 47 test time segments" /></span>
 							<p>The above shows the long-term predictions of the test regimes across 47 models developed for each time segment in test. The predictions are all based on the best parameter optimization using MAE as a metric.</p>
 
 							<h4>Short-Term Window</h4>
@@ -154,16 +225,25 @@ ts_cv = TimeSeriesSplit(
     test_size= int(.1*552)
     )
 							</pre>
-							<span class="image main"><img src="images/c2/11.RidgeCoeffs21days window.svg" alt="Ridge coefficients 21 day window" /></span>
+							<span class="image main"><img src="images/c2/11.RidgeCoeffs21days window.svg" alt="Ridge Regression feature coefficient instability in 21-day short-term window model" /></span>
 							<p>The feature weights appear very unstable and keep changing their values and as a result their importance.</p>
-							<span class="image main"><img src="images/c2/12.Error21days.svg" alt="Error metrics 21 day window" /></span>
+							<span class="image main"><img src="images/c2/12.Error21days.svg" alt="MAE and explained variance error metrics for 21-day short-term window model" /></span>
 							<p>Overall the Explained Variance is better in some cases, but the MAE is lower than the long-term model.</p>
-							<span class="image main"><img src="images/c2/13.RidgePred21days.svg" alt="Ridge predictions 21 day window" /></span>
+							<span class="image main"><img src="images/c2/13.RidgePred21days.svg" alt="Short-term Ridge Regression predictions vs actuals for 21-day window model" /></span>
 							<p>The short-term model visually appears to have mapped the ups and downs better in some places than the long-term model, even though the overall error is higher.</p>
 
 							<h2>Opportunistic Ensemble</h2>
 							<p>So what is the final solution? Run the models at each time segment, compare the MAE, and choose the model that shows better MAE — as this is the metric used for optimization. The error profile is given in the diagram below. There is certainly scope for further investigation to improve the error rate.</p>
-							<span class="image main"><img src="images/c2/ensembleerror.svg" alt="Ensemble error profile" /></span>
+							<span class="image main"><img src="images/c2/ensembleerror.svg" alt="Opportunistic ensemble error profile comparing long-term and short-term model MAE" /></span>
+
+							<!-- Topic Tags: Bottom -->
+							<div class="topic-tags" style="margin-top: 32px;">
+								<a href="#">Time-Series Forecasting</a>
+								<a href="#">Ridge Regression</a>
+								<a href="#">Feature Engineering</a>
+								<a href="#">Ensemble Models</a>
+								<a href="#">Predictive Analytics</a>
+							</div>
 
 						</div>
 					</div>
