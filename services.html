@@ -6,107 +6,379 @@
 -->
 <html>
 	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
+		<title>Services | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Data-Intuition.AI services — consulting engagements, data products, training programs, and fractional CDO advisory. Principal-led, outcome-scoped, production-minded." />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://data-intuition.ai/services.html" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+
+			/* ── Shared callout box — matches Big Picture style ── */
+			.callout-box {
+				border-left: 5px solid #e87722;
+				background-color: #fdf6ee;
+				padding: 20px 24px;
+				border-radius: 0 6px 6px 0;
+				margin-bottom: 0;
+			}
+			.callout-box p {
+				font-size: 0.95em;
+				line-height: 1.75;
+				color: #1a1a1a;
+				margin: 0 0 10px 0;
+			}
+			.callout-box p:last-child {
+				margin-bottom: 0;
+			}
+
+			/* ── Page intro ── */
+			.services-intro {
+				border-left: 5px solid #e87722;
+				background-color: #fdf6ee;
+				padding: 24px 28px;
+				border-radius: 0 6px 6px 0;
+				margin-bottom: 52px;
+			}
+			.services-intro p {
+				font-size: 1.05em;
+				line-height: 1.85;
+				color: #1a1a1a;
+				margin: 0;
+			}
+
+			/* ── Service section ── */
+			.service-section {
+				padding: 40px 0;
+				border-bottom: 1px solid rgba(255,255,255,0.07);
+			}
+			.service-section:last-of-type {
+				border-bottom: none;
+			}
+			.service-section .section-label {
+				font-size: 0.68em;
+				font-weight: 700;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: #e87722;
+				display: block;
+				margin-bottom: 12px;
+			}
+			.service-section h2 {
+				font-size: 1.55em;
+				font-weight: 700;
+				margin: 0 0 12px 0;
+				line-height: 1.25;
+				border-bottom: none;
+			}
+			.service-section .problem-statement {
+				font-size: 1em;
+				line-height: 1.8;
+				color: #9092a8;
+				font-style: italic;
+				margin-bottom: 24px;
+			}
+			.service-section p {
+				line-height: 1.85;
+				color: #c8cad4;
+				margin-bottom: 14px;
+			}
+			.service-section p:last-child {
+				margin-bottom: 0;
+			}
+
+			/* ── Delivery items inside callout ── */
+			.delivery-list {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.delivery-list li {
+				padding: 6px 0 6px 20px;
+				position: relative;
+				font-size: 0.92em;
+				line-height: 1.65;
+				color: #1a1a1a;
+				border-bottom: 1px solid rgba(232,119,34,0.12);
+			}
+			.delivery-list li:last-child {
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+			.delivery-list li::before {
+				content: '→';
+				position: absolute;
+				left: 0;
+				color: #e87722;
+				font-weight: 700;
+			}
+
+			/* ── Engagement modes (Fractional CDO) ── */
+			.engagement-modes {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 12px;
+				margin-top: 0;
+			}
+			.engagement-mode {
+				border-left: 5px solid #e87722;
+				background-color: #fdf6ee;
+				padding: 14px 18px;
+				border-radius: 0 6px 6px 0;
+			}
+			.engagement-mode strong {
+				display: block;
+				font-size: 0.8em;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: #e87722;
+				margin-bottom: 6px;
+			}
+			.engagement-mode p {
+				font-size: 0.85em;
+				color: #1a1a1a;
+				margin: 0;
+				line-height: 1.6;
+			}
+
+			/* ── CTA strip ── */
+			.cta-strip {
+				margin-top: 52px;
+				border-left: 5px solid #e87722;
+				background-color: #fdf6ee;
+				padding: 24px 28px;
+				border-radius: 0 6px 6px 0;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+			.cta-strip p {
+				font-size: 1em;
+				color: #1a1a1a;
+				margin: 0;
+				line-height: 1.6;
+				font-weight: 600;
+			}
+			.cta-strip a {
+				display: inline-block;
+				padding: 12px 28px;
+				background-color: #e87722;
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 0.85em;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+				text-decoration: none;
+				border-radius: 4px;
+				white-space: nowrap;
+				transition: background-color 0.2s ease;
+			}
+			.cta-strip a:hover {
+				background-color: #cf6510;
+				color: #ffffff;
+			}
+
+			@media (max-width: 640px) {
+				.engagement-modes {
+					grid-template-columns: 1fr;
+				}
+				.cta-strip {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Phantom</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="Data-Intuition.AI logo" /></span><span class="title">Data-Intuition.AI</span>
+					</a>
+					<nav>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="About Us.html">About</a></li>
-							<li><a href="Partners.html">Partners</a></li>
-							<li><a href="generic.html">Blogs</a></li>
-							<li><a href="generic.html">Contact</a></li>
+							<li><a href="#menu">Menu</a></li>
 						</ul>
 					</nav>
+				</div>
+			</header>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>Generic Page</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="methodology.html">Methodology</a></li>
+					<li><a href="https://www.credly.com/users/sumit-dhar-ai-ml-datascience" target="_blank">Certifications</a></li>
+					<li><a href="insights.html">Insights</a></li>
+					<li><a href="generic.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<h1>Services</h1>
+
+					<!-- Intro -->
+					<div class="services-intro">
+						<p>Every engagement starts with a business problem — not a technology. We work across four service models, each principal-led and scoped around a specific outcome. The scope varies. The standard doesn't.</p>
+					</div>
+
+					<!-- 01 Consulting Engagements -->
+					<div class="service-section">
+						<span class="section-label">01 — Consulting Engagements</span>
+						<h2>You Have Data. You Don't Have Answers.</h2>
+						<p class="problem-statement">Your team is buried in reports that describe what happened but can't tell you what to do next. Models get built, reviewed, and forgotten. The gap between data capability and business decision keeps widening.</p>
+
+						<p>We come in at the point where data and business reality need to be reconciled. That means going back to the data itself — before any model is written — to understand what signal is actually available, what question is actually worth answering, and what a useful answer would look like in practice.</p>
+						<p>Engagements span the full AI lifecycle: predictive modeling and machine learning, data strategy and architecture, AI roadmap and governance, and end-to-end analytics build-outs. Scope varies. What doesn't vary is that we leave with something that works in production, not just in a notebook.</p>
+
+						<div class="callout-box" style="margin-top: 24px;">
+							<ul class="delivery-list">
+								<li>Predictive models scoped to a specific decision or outcome</li>
+								<li>Data strategy and architecture aligned to business objectives</li>
+								<li>AI roadmap and governance frameworks built for your organization's maturity</li>
+								<li>End-to-end analytics build-outs from raw data to production</li>
+							</ul>
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<!-- 02 Data Products -->
+					<div class="service-section">
+						<span class="section-label">02 — Data Products</span>
+						<h2>One-Off Analysis Doesn't Compound. Products Do.</h2>
+						<p class="problem-statement">Every quarter the same questions get re-answered from scratch. Reports get rebuilt. Models get rerun. The organization keeps consuming analytical work without accumulating analytical capability.</p>
+
+						<p>A data product is an analytical asset that can be used repeatedly — by different people, across different time periods, without starting over. It packages the logic, the data, and the output into something the business can own and operate independently.</p>
+						<p>We build reusable ML scoring engines, dashboards and reporting assets designed for operational use, and industry-specific analytical tools tailored to the decision context they serve. The goal is always the same: leave the organization more capable than we found it.</p>
+
+						<div class="callout-box" style="margin-top: 24px;">
+							<ul class="delivery-list">
+								<li>Reusable ML models and scoring engines deployable in production</li>
+								<li>Dashboards and reporting assets built for operational decision-making</li>
+								<li>Industry-specific analytical tools scoped to your domain and use case</li>
 							</ul>
 						</div>
-					</footer>
+					</div>
 
+					<!-- 03 Training Programs -->
+					<div class="service-section">
+						<span class="section-label">03 — Training Programs</span>
+						<h2>Your Team Shouldn't Need a Translator Every Time.</h2>
+						<p class="problem-statement">Business teams make decisions on data they don't fully understand, built by analysts they can't interrogate. The result is either blind trust or reflexive skepticism — neither of which is useful.</p>
+
+						<p>These programs are built for cross-functional business teams — not data scientists. The objective is not to turn everyone into a practitioner. It is to raise the floor on data literacy so that business leaders can ask better questions, evaluate outputs critically, and drive analytical work toward decisions that matter.</p>
+						<p>Programs are tailored to the organization's context, the team's current capability, and the specific analytical tools and models in use. We teach people to work with data the way it actually exists in their environment — not in theory.</p>
+
+						<div class="callout-box" style="margin-top: 24px;">
+							<ul class="delivery-list">
+								<li>Data literacy programs for cross-functional business teams</li>
+								<li>Applied ML and analytics workshops grounded in real business problems</li>
+								<li>Custom curricula aligned to your tools, data, and decision context</li>
+								<li>Team enablement designed for independent capability after engagement ends</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- 04 Fractional CDO -->
+					<div class="service-section">
+						<span class="section-label">04 — Advisory &amp; Fractional CDO</span>
+						<h2>Senior Data Leadership Without the Full-Time Overhead.</h2>
+						<p class="problem-statement">You need someone who can sit in the room with the CFO and the engineering lead and speak both languages fluently. But you're not ready — or not sized — for a full-time Chief Data Officer.</p>
+
+						<p>The Fractional CDO model gives you access to two decades of cross-industry data and AI leadership on a structure that fits your stage and your budget. This isn't advisory from a distance — it's active involvement in the decisions that shape your data capability: hiring, architecture, vendor selection, roadmap prioritization, and organizational design.</p>
+						<p>Engagement structure is flexible by design. We meet the organization where it is.</p>
+
+						<div class="engagement-modes">
+							<div class="engagement-mode">
+								<strong>Monthly Retainer</strong>
+								<p>Defined hours, recurring cadence — ongoing strategic oversight and availability.</p>
+							</div>
+							<div class="engagement-mode">
+								<strong>Sprint-Based</strong>
+								<p>Intensive bursts tied to a specific initiative — roadmap, hiring push, architecture review.</p>
+							</div>
+							<div class="engagement-mode">
+								<strong>Embedded</strong>
+								<p>Part-time presence within your team for a defined period — operating as a genuine member of leadership.</p>
+							</div>
+							<div class="engagement-mode">
+								<strong>On-Call Advisory</strong>
+								<p>Available for decisions, reviews, and escalations as they arise — without a fixed schedule.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- CTA -->
+					<div class="cta-strip">
+						<p>Ready to talk about what the right engagement looks like for your organization?</p>
+						<a href="generic.html">Get In Touch</a>
+					</div>
+
+				</div>
 			</div>
 
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch</h2>
+						<form method="post" action="https://formspree.io/f/myyveqgb">
+							<div class="fields">
+								<div class="field half">
+									<input type="text" name="name" id="name" placeholder="Name" />
+								</div>
+								<div class="field half">
+									<input type="email" name="email" id="email" placeholder="Email" />
+								</div>
+								<div class="field">
+									<textarea name="message" id="message" placeholder="Message"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send" class="primary" /></li>
+							</ul>
+						</form>
+					</section>
+					<section>
+						<h2>Follow</h2>
+						<ul class="icons">
+							<li><a href="https://twitter.com/sxd213" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/sumitdhar71/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/sdhar2020/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="tel:4154759882" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+							<li><a href="mailto:sdhar@data-intuition.ai" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</section>
+					<ul class="copyright">
+						<li>&copy; SD Analytics, Insights & Data Science (SDAIDS) LLC</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
