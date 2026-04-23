@@ -6,108 +6,337 @@
 -->
 <html>
 	<head>
-		<title>Coming Soon</title>
+		<title>About | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Data-Intuition.AI is a senior-led AI and data science consultancy. Two decades of experience across Retail Finance, Insurance, Healthcare, and Hi-Tech — strategy to production." />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://data-intuition.ai/about.html" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+
+			/* ── Page layout ── */
+			.about-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 0;
+				margin-top: 8px;
+			}
+
+			/* ── Section blocks ── */
+			.about-section {
+				padding: 36px 0;
+				border-bottom: 1px solid rgba(255,255,255,0.07);
+			}
+			.about-section:last-child {
+				border-bottom: none;
+			}
+			.about-section .section-label {
+				font-size: 0.68em;
+				font-weight: 700;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: #e87722;
+				display: block;
+				margin-bottom: 14px;
+			}
+			.about-section h2 {
+				font-size: 1.6em;
+				font-weight: 700;
+				margin: 0 0 16px 0;
+				line-height: 1.25;
+				border-bottom: none;
+			}
+			.about-section p {
+				line-height: 1.85;
+				color: #c8cad4;
+				margin-bottom: 14px;
+			}
+			.about-section p:last-child {
+				margin-bottom: 0;
+			}
+
+			/* ── Lead / hero block ── */
+			.about-lead {
+				border-left: 5px solid #e87722;
+				background-color: #1e2130;
+				padding: 28px 32px;
+				border-radius: 0 6px 6px 0;
+				margin-bottom: 48px;
+			}
+			.about-lead p {
+				font-size: 1.08em;
+				line-height: 1.85;
+				color: #c8cad4;
+				margin: 0;
+			}
+
+			/* ── Philosophy callout ── */
+			.philosophy-block {
+				background-color: #1a1c2a;
+				border: 1px solid rgba(232, 119, 34, 0.25);
+				border-radius: 6px;
+				padding: 28px 32px;
+				margin: 24px 0;
+			}
+			.philosophy-block .no-koolaid {
+				font-size: 1.15em;
+				font-weight: 700;
+				color: #e87722;
+				letter-spacing: 0.03em;
+				margin-bottom: 16px;
+				display: block;
+			}
+			.philosophy-block p {
+				line-height: 1.85;
+				color: #c8cad4;
+				margin-bottom: 12px;
+			}
+			.philosophy-block p:last-child {
+				margin-bottom: 0;
+			}
+
+			/* ── Stat / credential strip ── */
+			.credential-strip {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 16px;
+				margin: 28px 0 8px 0;
+			}
+			.credential-pill {
+				background-color: #2e3141;
+				border: 1px solid #4a5068;
+				border-radius: 4px;
+				padding: 10px 18px;
+				font-size: 0.82em;
+				font-weight: 600;
+				color: #ffffff;
+				letter-spacing: 0.03em;
+			}
+			.credential-pill span {
+				color: #e87722;
+				margin-right: 8px;
+			}
+
+			/* ── Services CTA ── */
+			.services-cta {
+				display: inline-block;
+				margin-top: 20px;
+				padding: 12px 28px;
+				background-color: #e87722;
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 0.88em;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+				text-decoration: none;
+				border-radius: 4px;
+				transition: background-color 0.2s ease;
+			}
+			.services-cta:hover {
+				background-color: #cf6510;
+				color: #ffffff;
+			}
+
+			/* ── Firm attributes ── */
+			.firm-attrs {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 16px;
+				margin-top: 24px;
+			}
+			.firm-attr {
+				background-color: #1e2130;
+				border-left: 3px solid #e87722;
+				padding: 16px 20px;
+				border-radius: 0 4px 4px 0;
+			}
+			.firm-attr strong {
+				display: block;
+				color: #ffffff;
+				font-size: 0.88em;
+				font-weight: 700;
+				margin-bottom: 6px;
+				letter-spacing: 0.02em;
+			}
+			.firm-attr p {
+				font-size: 0.85em;
+				color: #9092a8;
+				margin: 0;
+				line-height: 1.6;
+			}
+
+			@media (max-width: 640px) {
+				.firm-attrs {
+					grid-template-columns: 1fr;
+				}
+				.credential-strip {
+					flex-direction: column;
+				}
+			}
+
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="Data-Intuition.AI logo" /></span><span class="title">Data-Intuition.AI</span>
+					</a>
+					<nav>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="#menu">Menu</a></li>
 						</ul>
 					</nav>
+				</div>
+			</header>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>Coming Soon</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="methodology.html">Methodology</a></li>
+					<li><a href="https://www.credly.com/users/sumit-dhar-ai-ml-datascience" target="_blank">Certifications</a></li>
+					<li><a href="insights.html">Insights</a></li>
+					<li><a href="generic.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<h1>About</h1>
+
+					<!-- Lead -->
+					<div class="about-lead">
+						<p>Over two decades at the intersection of data, AI, and business — spanning the full AI lifecycle from strategy to production, across Retail Finance, Insurance, Healthcare, and Hi-Tech. Fortune 500 enterprises and growth-stage businesses. The US and India.</p>
+					</div>
+
+					<!-- Experience -->
+					<div class="about-section">
+						<span class="section-label">Experience</span>
+						<h2>The Career Behind the Work</h2>
+						<p>That range covers financial services, insurance, telecommunications, education, and consumer operations — every engagement adding another data point on what actually works, and what doesn't.</p>
+						<p>That breadth isn't just a résumé line. It's a map of every failure mode already encountered — the over-engineered models that never reached production, the dashboards that answered the wrong question beautifully, the initiatives that dissolved in steering committee. The hype cycles. The blame cycles. And precisely where value gets lost in between.</p>
+
+						<div class="credential-strip">
+							<div class="credential-pill"><span>↗</span>Retail Finance</div>
+							<div class="credential-pill"><span>↗</span>Insurance</div>
+							<div class="credential-pill"><span>↗</span>Healthcare</div>
+							<div class="credential-pill"><span>↗</span>Hi-Tech</div>
+							<div class="credential-pill"><span>↗</span>Telecommunications</div>
+							<div class="credential-pill"><span>↗</span>Education</div>
+							<div class="credential-pill"><span>↗</span>Consumer Operations</div>
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+					<!-- Philosophy -->
+					<div class="about-section">
+						<span class="section-label">Philosophy</span>
+						<h2>First Principles, Not Fashion</h2>
+						<p>Most data projects fail not because of the algorithms — they fail because nobody took the time to understand the data, ask the right business questions, or build a modeling set that actually contained the signal needed to answer them. Our approach starts at first principles: with the data itself, before a single line of model code is written.</p>
 
+						<div class="philosophy-block">
+							<span class="no-koolaid">No Kool-Aid. No snake oil. No complexity theater.</span>
+							<p>We don't sell narratives about what AI could do for your organization. We show you what it does — incrementally, bringing tangible results to every conversation rather than promises.</p>
+							<p>Structure the right problem. Build a representative, pertinent dataset. Improve predictability. Communicate clearly. Repeat.</p>
+							<p>This isn't a fashionable position in an industry that rewards elaborate roadmaps and layers of intermediaries. But it is the one that actually delivers.</p>
+						</div>
+					</div>
+
+					<!-- What we do -->
+					<div class="about-section">
+						<span class="section-label">What We Do</span>
+						<h2>Engagements Built Around Outcomes</h2>
+						<p>Data-Intuition.AI works with organizations through consulting engagements, data products, and training programs — all principal-led, all scoped around a specific business outcome. Whether you need a predictive model in production, a reusable analytical asset, or a team that can carry the work forward independently, we have a model that fits.</p>
+						<a href="services.html" class="services-cta">Explore Our Services</a>
+					</div>
+
+					<!-- The Firm -->
+					<div class="about-section">
+						<span class="section-label">The Firm</span>
+						<h2>Lean by Design. Senior-Led by Principle.</h2>
+						<p>Data-Intuition.AI is deliberately uninterested in the overhead that typically sits between a business problem and its answer. Small enough to be agile. Experienced enough to be trusted with the hard problems.</p>
+
+						<div class="firm-attrs">
+							<div class="firm-attr">
+								<strong>Principal-Led</strong>
+								<p>Every engagement is run by the principal — not delegated to a junior team after the pitch.</p>
+							</div>
+							<div class="firm-attr">
+								<strong>Outcome-Scoped</strong>
+								<p>Work is defined by a specific business result, not by hours or deliverable lists.</p>
+							</div>
+							<div class="firm-attr">
+								<strong>Production-Minded</strong>
+								<p>Models that never reach production don't count. We build for deployment from day one.</p>
+							</div>
+							<div class="firm-attr">
+								<strong>No Intermediaries</strong>
+								<p>Direct access to the experience that solved the problem — no account managers in between.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
 
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch</h2>
+						<form method="post" action="https://formspree.io/f/myyveqgb">
+							<div class="fields">
+								<div class="field half">
+									<input type="text" name="name" id="name" placeholder="Name" />
+								</div>
+								<div class="field half">
+									<input type="email" name="email" id="email" placeholder="Email" />
+								</div>
+								<div class="field">
+									<textarea name="message" id="message" placeholder="Message"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send" class="primary" /></li>
+							</ul>
+						</form>
+					</section>
+					<section>
+						<h2>Follow</h2>
+						<ul class="icons">
+							<li><a href="https://twitter.com/sxd213" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/sumitdhar71/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/sdhar2020/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="tel:4154759882" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+							<li><a href="mailto:sdhar@data-intuition.ai" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</section>
+					<ul class="copyright">
+						<li>&copy; SD Analytics, Insights & Data Science (SDAIDS) LLC</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
