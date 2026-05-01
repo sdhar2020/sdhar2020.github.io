@@ -1,112 +1,572 @@
 <!DOCTYPE HTML>
 <!--
-	Phantom by HTML5 UP
+	Data-Intuition.AI
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
+		<title>DIVE™ Methodology | Data-Intuition.AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="DIVE™ — the Data-Intuition Value Engine™. A proprietary methodology that transforms data into measurable business value through Diagnose, Identify, Validate, and Execute." />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://data-intuition.ai/methodology.html" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+
+			/* ── Section eyebrow ── */
+			.section-eyebrow {
+				display: inline-block;
+				font-size: 0.72em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #8b9ab8;
+				margin: 0 0 1em 0;
+				border-left: 2px solid #4a5068;
+				padding-left: 10px;
+			}
+
+			/* ── DIVE intro block ── */
+			.dive-intro {
+				background: #1e2230;
+				border: 1px solid #2e3348;
+				border-radius: 10px;
+				padding: 36px 40px;
+				margin: 0 0 3.5em 0;
+				position: relative;
+				overflow: hidden;
+			}
+			.dive-intro::before {
+				content: 'DIVE™';
+				position: absolute;
+				right: 32px;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 6em;
+				font-weight: 900;
+				color: rgba(255,255,255,0.03);
+				letter-spacing: -0.02em;
+				pointer-events: none;
+				user-select: none;
+			}
+			.dive-intro-badge {
+				display: inline-block;
+				font-size: 0.72em;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: #8b9ab8;
+				background: #252a3e;
+				border: 1px solid #3a4060;
+				padding: 4px 12px;
+				border-radius: 20px;
+				margin-bottom: 16px;
+			}
+			.dive-intro h2 {
+				font-size: 1.4em;
+				font-weight: 700;
+				color: #ffffff;
+				margin: 0 0 14px 0;
+				border: none;
+				padding: 0;
+				line-height: 1.3;
+			}
+			.dive-intro p {
+				font-size: 0.9em;
+				color: #8b9ab8;
+				line-height: 1.75;
+				margin: 0 0 10px 0;
+				max-width: 680px;
+			}
+			.dive-intro p:last-child { margin-bottom: 0; }
+
+			/* ── Four pillars ── */
+			.pillars-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 2px;
+				background: #1a1d2e;
+				border: 1px solid #2e3348;
+				border-radius: 10px;
+				overflow: hidden;
+				margin: 0 0 3.5em 0;
+			}
+			.pillar {
+				background: #1e2230;
+				padding: 32px 26px;
+				position: relative;
+				transition: background 0.2s;
+			}
+			.pillar:hover { background: #232840; }
+			.pillar-step {
+				font-size: 0.65em;
+				font-weight: 700;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: #3e4668;
+				margin-bottom: 8px;
+			}
+			.pillar-name {
+				font-size: 1.25em;
+				font-weight: 800;
+				color: #ffffff;
+				margin: 0 0 4px 0;
+				line-height: 1.1;
+			}
+			.pillar-tm {
+				font-size: 0.55em;
+				vertical-align: super;
+				color: #6a7490;
+			}
+			.pillar-tag {
+				display: inline-block;
+				font-size: 0.7em;
+				font-weight: 600;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+				color: #6a7490;
+				margin-bottom: 16px;
+			}
+			.pillar-bar {
+				height: 2px;
+				border-radius: 2px;
+				margin-bottom: 18px;
+			}
+			.pillar:nth-child(1) .pillar-bar { background: #5b6fd4; }
+			.pillar:nth-child(2) .pillar-bar { background: #4a9fd4; }
+			.pillar:nth-child(3) .pillar-bar { background: #4abfb0; }
+			.pillar:nth-child(4) .pillar-bar { background: #4ad48a; }
+			.pillar ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.pillar ul li {
+				font-size: 0.82em;
+				color: #8b9ab8;
+				line-height: 1.6;
+				padding: 5px 0;
+				border-bottom: 1px solid #1a1d2e;
+				display: flex;
+				align-items: flex-start;
+				gap: 8px;
+			}
+			.pillar ul li:last-child { border-bottom: none; }
+			.pillar ul li::before {
+				content: '→';
+				color: #3e4668;
+				flex-shrink: 0;
+				margin-top: 1px;
+			}
+
+			/* ── Why it works ── */
+			.why-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 16px;
+				margin: 0 0 3.5em 0;
+			}
+			.why-card {
+				background: #1e2230;
+				border: 1px solid #2e3348;
+				border-radius: 10px;
+				padding: 24px 20px;
+				transition: border-color 0.25s;
+			}
+			.why-card:hover { border-color: #4a5580; }
+			.why-icon {
+				font-size: 20px;
+				margin-bottom: 12px;
+				display: block;
+			}
+			.why-card h3 {
+				font-size: 0.88em;
+				font-weight: 700;
+				color: #ffffff;
+				margin: 0 0 6px 0;
+				border: none;
+				padding: 0;
+			}
+			.why-card p {
+				font-size: 0.8em;
+				color: #8b9ab8;
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			/* ── Who it's for ── */
+			.for-list {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				gap: 12px;
+				margin: 0 0 3.5em 0;
+			}
+			.for-item {
+				background: #1e2230;
+				border: 1px solid #2e3348;
+				border-radius: 8px;
+				padding: 16px 18px;
+				display: flex;
+				align-items: flex-start;
+				gap: 12px;
+				font-size: 0.85em;
+				color: #a0a8c0;
+				line-height: 1.55;
+			}
+			.for-item::before {
+				content: '✓';
+				color: #4a5580;
+				font-weight: 700;
+				flex-shrink: 0;
+				margin-top: 1px;
+			}
+
+			/* ── Leverage section ── */
+			.leverage-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 16px;
+				margin: 0 0 3.5em 0;
+			}
+			.leverage-card {
+				background: #1e2230;
+				border: 1px solid #2e3348;
+				border-radius: 10px;
+				padding: 24px 20px;
+				text-align: center;
+				transition: border-color 0.25s;
+			}
+			.leverage-card:hover { border-color: #4a5580; }
+			.leverage-card .lev-icon {
+				font-size: 22px;
+				display: block;
+				margin-bottom: 10px;
+			}
+			.leverage-card h3 {
+				font-size: 0.88em;
+				font-weight: 700;
+				color: #ffffff;
+				margin: 0 0 6px 0;
+				border: none;
+				padding: 0;
+			}
+			.leverage-card p {
+				font-size: 0.78em;
+				color: #8b9ab8;
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			/* ── IP disclaimer ── */
+			.ip-disclaimer {
+				background: #161926;
+				border: 1px solid #2e3348;
+				border-radius: 8px;
+				padding: 20px 24px;
+				margin: 0 0 2em 0;
+				font-size: 0.75em;
+				color: #4e5c78;
+				line-height: 1.7;
+			}
+			.ip-disclaimer strong { color: #6a7490; }
+
+			/* ── CTA block ── */
+			.cta-block {
+				background: #1e2230;
+				border: 1px solid #2e3348;
+				border-radius: 10px;
+				padding: 36px 40px;
+				display: grid;
+				grid-template-columns: 1fr auto;
+				gap: 28px;
+				align-items: center;
+				margin: 0 0 3.5em 0;
+			}
+			.cta-block h3 {
+				font-size: 1.1em;
+				font-weight: 700;
+				color: #ffffff;
+				margin: 0 0 8px 0;
+				border: none;
+				padding: 0;
+			}
+			.cta-block p {
+				font-size: 0.85em;
+				color: #8b9ab8;
+				margin: 0;
+				line-height: 1.65;
+			}
+			.cta-btn {
+				display: inline-block;
+				background: #2e3a5c;
+				color: #a0b0d0;
+				font-size: 0.82em;
+				font-weight: 600;
+				padding: 12px 24px;
+				border-radius: 8px;
+				text-decoration: none;
+				white-space: nowrap;
+				border: 1px solid #3a4a6e;
+				transition: background 0.2s, color 0.2s;
+			}
+			.cta-btn:hover { background: #3a4a6e; color: #ffffff; }
+
+			@media (max-width: 640px) {
+				.cta-block { grid-template-columns: 1fr; }
+				.dive-intro { padding: 28px 24px; }
+				.dive-intro::before { display: none; }
+			}
+		</style>
 	</head>
 	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="" /></span><span class="title">Phantom</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/SDAnalyticsl3.png" alt="Data-Intuition.AI logo" /></span>
+						<span class="title">Data-Intuition.AI</span>
+					</a>
+					<nav>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="About Us.html">About</a></li>
-							<li><a href="Partners.html">Partners</a></li>
-							<li><a href="generic.html">Blogs</a></li>
-							<li><a href="generic.html">Contact</a></li>
+							<li><a href="#menu">Menu</a></li>
 						</ul>
 					</nav>
+				</div>
+			</header>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>Generic Page</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="methodology.html">Methodology</a></li>
+					<li><a href="https://www.credly.com/users/sumit-dhar-ai-ml-datascience" target="_blank">Certifications</a></li>
+					<li><a href="insights.html">Insights</a></li>
+					<li><a href="generic.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<!-- Hero -->
+					<header>
+						<h1>DIVE™ Methodology</h1>
+						<p>The <strong>Data-Intuition Value Engine™</strong> — a proprietary, repeatable framework that transforms data into measurable business value. DIVE™ blends analytical rigor with business intuition to deliver decision-driven outcomes at every stage of an engagement.</p>
+						<p>DIVE™ is used in commerce as a proprietary analytics and decision-engineering framework by Data-Intuition.AI.</p>
+					</header>
+
+					<!-- Intro block -->
+					<p class="section-eyebrow">What is DIVE™</p>
+					<div class="dive-intro">
+						<span class="dive-intro-badge">Proprietary methodology</span>
+						<h2>The Data-Intuition Value Engine™</h2>
+						<p>DIVE™ is a proprietary methodology developed by Data-Intuition.AI. It exists because most analytics projects stall — not from a lack of data or tools, but from a lack of structure. The wrong problem gets modeled. The dataset misses the signal. The results never reach production.</p>
+						<p>DIVE™ solves this by imposing discipline at each stage: from first-principles problem diagnosis, through data asset mapping, rapid validation, and finally operationalized delivery. It is value-centric and decision-driven by design — every phase is oriented toward a business outcome, not a technical milestone.</p>
+						<p>The result is a repeatable framework that reduces project risk, accelerates time-to-value, and ensures that analytical work translates into decisions your organization can actually act on.</p>
+					</div>
+
+					<!-- Four pillars -->
+					<p class="section-eyebrow">The four pillars</p>
+					<div class="pillars-grid">
+
+						<div class="pillar">
+							<div class="pillar-step">Phase 01</div>
+							<div class="pillar-name">Diagnose<span class="pillar-tm">™</span></div>
+							<div class="pillar-tag">Define the real problem</div>
+							<div class="pillar-bar"></div>
+							<ul>
+								<li>Identify the true business problem, not the presenting symptom</li>
+								<li>Clarify the decisions that need to be made and by whom</li>
+								<li>Map outcomes, value levers, and success criteria</li>
+								<li>Align stakeholders before any data is touched</li>
+							</ul>
+						</div>
+
+						<div class="pillar">
+							<div class="pillar-step">Phase 02</div>
+							<div class="pillar-name">Identify<span class="pillar-tm">™</span></div>
+							<div class="pillar-tag">Map signals & opportunities</div>
+							<div class="pillar-bar"></div>
+							<ul>
+								<li>Audit available data assets and their quality</li>
+								<li>Identify predictive signals relevant to the business question</li>
+								<li>Prioritize high-ROI opportunities from the data landscape</li>
+								<li>Build the representative, pertinent modeling set</li>
+							</ul>
+						</div>
+
+						<div class="pillar">
+							<div class="pillar-step">Phase 03</div>
+							<div class="pillar-name">Validate<span class="pillar-tm">™</span></div>
+							<div class="pillar-tag">Confirm before you commit</div>
+							<div class="pillar-bar"></div>
+							<ul>
+								<li>Rapid experimentation and scenario modeling</li>
+								<li>Evidence-based confirmation of feasibility and accuracy</li>
+								<li>ROI validation before full-scale build</li>
+								<li>Findings communicated clearly at every step</li>
+							</ul>
+						</div>
+
+						<div class="pillar">
+							<div class="pillar-step">Phase 04</div>
+							<div class="pillar-name">Execute<span class="pillar-tm">™</span></div>
+							<div class="pillar-tag">Operationalize the solution</div>
+							<div class="pillar-bar"></div>
+							<ul>
+								<li>Deploy validated solutions into production environments</li>
+								<li>Ensure adoption, integration, and measurable impact</li>
+								<li>Operational integration with existing business workflows</li>
+								<li>Ongoing decision improvement and monitoring</li>
+							</ul>
+						</div>
+
+					</div>
+
+					<!-- Why it works -->
+					<p class="section-eyebrow">Why DIVE™ works</p>
+					<div class="why-grid">
+						<div class="why-card">
+							<span class="why-icon">🛡</span>
+							<h3>Reduces project risk</h3>
+							<p>Diagnosis and validation phases catch misalignment early — before it becomes expensive.</p>
+						</div>
+						<div class="why-card">
+							<span class="why-icon">⚡</span>
+							<h3>Accelerates time-to-value</h3>
+							<p>Structure eliminates wasted cycles. Results reach stakeholders faster than open-ended engagements.</p>
+						</div>
+						<div class="why-card">
+							<span class="why-icon">✅</span>
+							<h3>Ensures adoption</h3>
+							<p>Built around the decisions that matter, not just models that score well in isolation.</p>
+						</div>
+						<div class="why-card">
+							<span class="why-icon">🔧</span>
+							<h3>Prevents over-engineering</h3>
+							<p>Each phase earns the next. Complexity is introduced only when the problem demands it.</p>
+						</div>
+						<div class="why-card">
+							<span class="why-icon">🤝</span>
+							<h3>Aligns stakeholders</h3>
+							<p>Diagnose™ surfaces competing definitions of success before any work begins.</p>
+						</div>
+						<div class="why-card">
+							<span class="why-icon">📊</span>
+							<h3>Quantifies ROI</h3>
+							<p>Every engagement is framed around business value — not model performance metrics alone.</p>
 						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+					<!-- Who it's for -->
+					<p class="section-eyebrow">Who DIVE™ is for</p>
+					<div class="for-list">
+						<div class="for-item">Organizations sitting on rich data assets but without a clear analytics strategy to act on them</div>
+						<div class="for-item">Analytics and data science teams producing good models that struggle to reach consistent business impact</div>
+						<div class="for-item">Leadership teams that need executive decision support without layers of intermediaries between them and the answer</div>
+						<div class="for-item">Businesses prioritizing high-ROI use cases and need a structured framework to evaluate and sequence them</div>
+						<div class="for-item">Organizations building internal ML and AI delivery capability and need a repeatable framework to anchor on</div>
+						<div class="for-item">Teams that have experienced the hype cycle and want a no-Kool-Aid approach to getting results from data</div>
+					</div>
 
+					<!-- How DIVE creates leverage -->
+					<p class="section-eyebrow">How DIVE™ creates leverage</p>
+					<div class="leverage-grid">
+						<div class="leverage-card">
+							<span class="lev-icon">🔁</span>
+							<h3>Consulting engagements</h3>
+							<p>Applied as a repeatable delivery system across client projects — every engagement benefits from accumulated pattern recognition.</p>
+						</div>
+						<div class="leverage-card">
+							<span class="lev-icon">🧰</span>
+							<h3>Diagnostic tool</h3>
+							<p>The Diagnose™ phase can be deployed as a standalone organizational assessment to identify your highest-value data opportunities.</p>
+						</div>
+						<div class="leverage-card">
+							<span class="lev-icon">📦</span>
+							<h3>Productized service</h3>
+							<p>DIVE™ enables value-based pricing with defined scope — not open-ended engagements that expand without clear outcomes.</p>
+						</div>
+						<div class="leverage-card">
+							<span class="lev-icon">🎓</span>
+							<h3>Workshop & training</h3>
+							<p>The DIVE™ framework is available as a structured training program to build internal analytics delivery capability in your team.</p>
+						</div>
+					</div>
+
+					<!-- CTA -->
+					<div class="cta-block">
+						<div>
+							<h3>Ready to apply DIVE™ to your business problem?</h3>
+							<p>Every engagement starts with a conversation. Tell us what you're trying to solve and we'll show you how DIVE™ structures the path from data to decision.</p>
+						</div>
+						<a href="generic.html" class="cta-btn">Start a conversation →</a>
+					</div>
+
+					<!-- IP Disclaimer -->
+					<div class="ip-disclaimer">
+						<strong>IP Notice:</strong> DIVE™, Diagnose™, Identify™, Validate™, Execute™, and Data-Intuition Value Engine™ are proprietary methodologies of Data-Intuition.AI. All content, frameworks, diagrams, and materials associated with the DIVE™ methodology are protected under applicable intellectual property laws. Unauthorized use, reproduction, distribution, or adaptation is strictly prohibited. © Data-Intuition.AI
+					</div>
+
+				</div>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch</h2>
+						<form method="post" action="https://formspree.io/f/myyveqgb">
+							<div class="fields">
+								<div class="field half">
+									<input type="text" name="name" id="name" placeholder="Name" />
+								</div>
+								<div class="field half">
+									<input type="email" name="email" id="email" placeholder="Email" />
+								</div>
+								<div class="field">
+									<textarea name="message" id="message" placeholder="Message"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send" class="primary" /></li>
+							</ul>
+						</form>
+					</section>
+					<section>
+						<h2>Follow</h2>
+						<ul class="icons">
+							<li><a href="https://twitter.com/sxd213" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/sumitdhar71/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/sdhar2020/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="tel:4154759882" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+							<li><a href="mailto:sdhar@data-intuition.ai" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</section>
+					<ul class="copyright">
+						<li>&copy; SD Analytics, Insights & Data Science (SDAIDS) LLC</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
 
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
